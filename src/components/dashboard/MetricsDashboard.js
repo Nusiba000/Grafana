@@ -13,6 +13,8 @@ export default function MetricsDashboard({
   onMetricSelect,
   source,
 }) {
+  console.log("DASHBOARD SOURCE:", source);
+
   return (
     <div className="dashboard">
       <div className="dashboard-header" />
@@ -24,6 +26,7 @@ export default function MetricsDashboard({
             <span className="metric-count">{metrics.length} metrics</span>
           </div>
           <MetricsSelector
+            key={source} 
             metrics={metrics}
             onMetricSelect={onMetricSelect}
             selectedMetric={selectedMetric}
@@ -32,7 +35,7 @@ export default function MetricsDashboard({
 
         <div className="data-panel">
           {selectedMetric ? (
-            <MetricDataViewer metric={selectedMetric} source={source} />
+            <MetricDataViewer key={source} metric={selectedMetric} source={source}/>
           ) : (
             <div className="no-selection">
               <Database size={48} />

@@ -252,7 +252,7 @@ class JiraClient:
                 {
                     "type": "bulletList",
                     "content": [
-                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Source: ODP Main Prometheus Instance"}]}]},
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"Data Source: {alert_data.get('source', 'unknown')}"}]}]},
                         {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Alert Type: Automatic Threshold Violation"}]}]},
                         {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Requires: Immediate Investigation"}]}]}
                     ]
@@ -361,15 +361,22 @@ def prometheus_query():
     try:
         query = request.args.get('query')
         source = request.args.get('source', 'vcenter-prom')
+        time_param = request.args.get('time')  
 
         base_url = DATA_SOURCES.get(source)
 
         if not base_url:
             return jsonify({"error": f"Invalid data source: {source}"}), 400
 
+        # Build params dynamically
+        params = {"query": query}
+        if time_param:
+            params["time"] = time_param
+
         response = requests.get(
             f"{base_url}/api/v1/query",
-            params={"query": query}
+            params=params,
+            timeout=10 
         )
 
         return jsonify(response.json())
@@ -389,6 +396,22 @@ def prometheus_label_values(label_name):
         response = requests.get(
             f"{base_url}/api/v1/label/{label_name}/values"
         )
+
+        return jsonify(response.json())
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+@app.route('/api/v1/metadata', methods=['GET'])
+def prometheus_metadata():
+    try:
+        source = request.args.get('source', 'vcenter-prom')
+        base_url = DATA_SOURCES.get(source)
+
+        if not base_url:
+            return jsonify({"error": f"Invalid data source: {source}"}), 400
+
+        response = requests.get(f"{base_url}/api/v1/metadata")
 
         return jsonify(response.json())
 
@@ -431,7 +454,7 @@ def create_alert():
         required_fields = ['metric_name', 'current_value', 'yesterday_value', 'change_percentage', 'labels']
         for field in required_fields:
             if field not in data:
-                logger.error(f"❌ Missing required field: {field}")
+                logger.error(f" Missing required field: {field}")
                 return jsonify({
                     "success": False,
                     "error": f"Missing required field: {field}"

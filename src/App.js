@@ -25,6 +25,35 @@ function getMetricsFetchKey(pathname) {
 }
 
 function AppRoutes() {
+  const getDefaultMetric = (metrics, source) => {
+  if (!metrics || metrics.length === 0) return null;
+
+  switch (source) {
+    case "proxmox-prom":
+      return (
+        metrics.find(m => m.name.toLowerCase().includes("pve")) ||
+        metrics.find(m => m.name.toLowerCase().includes("cpu")) ||
+        metrics[0]
+      );
+
+    case "nebulanew-prom":
+      return (
+        metrics.find(m => m.name.toLowerCase().includes("kube")) ||
+        metrics.find(m => m.name.toLowerCase().includes("pod")) ||
+        metrics[0]
+      );
+
+    case "vcenter-prom":
+      return (
+        metrics.find(m => m.name.toLowerCase().includes("vm")) ||
+        metrics.find(m => m.name.toLowerCase().includes("cpu")) ||
+        metrics[0]
+      );
+
+    default:
+      return metrics[0];
+  }
+};
   const location = useLocation();
   const [selectedMetric, setSelectedMetric] = useState(null);
   const [metrics, setMetrics] = useState([]);
@@ -54,7 +83,11 @@ function AppRoutes() {
         const metricNames = data.data;
         const parsedMetrics = [];
 
-        const metadataResponse = await fetch('/api/v1/metadata');
+        const metadataUrl = source
+        ? `/api/v1/metadata?source=${encodeURIComponent(source)}`
+        : '/api/v1/metadata';
+
+        const metadataResponse = await fetch(metadataUrl);
         const metadataData = await metadataResponse.json();
 
         metricNames.forEach((name) => {
@@ -77,8 +110,13 @@ function AppRoutes() {
         });
 
         setMetrics(parsedMetrics);
-        setError(null);
+        // SMART SELECTION BASED ON DATASOURCE
+        const defaultMetric = getDefaultMetric(parsedMetrics, source);
+        setSelectedMetric(defaultMetric);
+
+        setError (null);
         initialFetchDoneRef.current = true;
+
       } else {
         setError('Failed to parse metrics data');
       }
@@ -92,16 +130,20 @@ function AppRoutes() {
 
   useEffect(() => {
     const key = getMetricsFetchKey(location.pathname);
+
     if (key === null) {
       setLoading(false);
       return;
     }
     const source = key === 'default' ? undefined : key;
+    // Store current source
     lastFetchConfigRef.current = { source };
+    // FORCE reset metric BEFORE fetching
     setSelectedMetric(null);
     const background = initialFetchDoneRef.current;
+    // Fetch metrics for new source
     fetchMetrics({ source, background });
-  }, [location.pathname]);
+  },[location.pathname]);
 
   const handleMetricSelect = (metric) => {
     setSelectedMetric(metric);

@@ -4854,3 +4854,1873 @@ cs...
 2026-04-13 17:25:58,150 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-5953448129309073544 - Last ticket was 13.4 seconds ago
 2026-04-13 17:25:58,151 - INFO - 127.0.0.1 - - [13/Apr/2026 17:25:58] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
 2026-04-13 17:25:58,154 - INFO - 127.0.0.1 - - [13/Apr/2026 17:25:58] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:57:35,011 - INFO - ==================================================
+2026-04-13 17:57:35,012 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 17:57:35,017 - INFO - Current time: 2026-04-13 17:57:35
+2026-04-13 17:57:35,019 - INFO - No critical metrics to check
+2026-04-13 17:57:35,020 - INFO - ==================================================
+2026-04-13 17:57:36,153 - INFO - ==================================================
+2026-04-13 17:57:36,154 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 17:57:36,159 - INFO - Current time: 2026-04-13 17:57:36
+2026-04-13 17:57:36,159 - INFO - Creating hourly ticket for persistent critical metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 17:57:36,160 - INFO - Preparing JIRA ticket data...
+2026-04-13 17:57:36,161 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 17:57:37,904 - INFO - JIRA API Response Status: 401
+2026-04-13 17:57:37,905 - ERROR - JIRA API FAILED!
+2026-04-13 17:57:37,911 - ERROR - Status Code: 401
+2026-04-13 17:57:37,912 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 17:57:37,915 - ERROR - FAILED TO CREATE HOURLY TICKET!
+2026-04-13 17:57:37,916 - ERROR - Error: JIRA API error: 401
+2026-04-13 17:57:37,917 - INFO - ==================================================
+2026-04-13 17:58:42,855 - INFO - JIRA Client initialized
+2026-04-13 17:58:42,855 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 17:58:42,863 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 17:58:42,864 - INFO - Project: OCI
+2026-04-13 17:58:42,869 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 17:58:42,871 - INFO - ==================================================
+2026-04-13 17:58:42,874 - INFO - JIRA Client initialized
+2026-04-13 17:58:42,874 - INFO - Hourly scheduler started in background thread
+2026-04-13 17:58:42,874 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 17:58:42,876 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 17:58:42,876 - INFO - Project: OCI
+2026-04-13 17:58:42,937 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 17:58:42,938 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 17:58:42,946 - INFO -  * Restarting with stat
+2026-04-13 17:58:43,741 - INFO - JIRA Client initialized
+2026-04-13 17:58:43,741 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 17:58:43,745 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 17:58:43,746 - INFO - Project: OCI
+2026-04-13 17:58:43,751 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 17:58:43,751 - INFO - ==================================================
+2026-04-13 17:58:43,758 - INFO - JIRA Client initialized
+2026-04-13 17:58:43,758 - INFO - Hourly scheduler started in background thread
+2026-04-13 17:58:43,759 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 17:58:43,761 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 17:58:43,761 - INFO - Project: OCI
+2026-04-13 17:58:43,800 - WARNING -  * Debugger is active!
+2026-04-13 17:58:43,804 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 17:59:29,913 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:29] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 17:59:29,919 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:29] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 17:59:30,163 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:30,163 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:30,167 - INFO - Change: 44.87435706527012%
+2026-04-13 17:59:30,168 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:30,169 - INFO - Creating JIRA ticket...
+2026-04-13 17:59:30,170 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_sum_-7688986723984041218
+2026-04-13 17:59:30,170 - INFO - Preparing JIRA ticket data...
+2026-04-13 17:59:30,171 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 17:59:30,218 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:30,219 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:30,222 - INFO - Change: 44.87435706527012%
+2026-04-13 17:59:30,223 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:30,224 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 0.1 seconds ago
+2026-04-13 17:59:30,225 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:30] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:31,546 - INFO - JIRA API Response Status: 401
+2026-04-13 17:59:31,547 - ERROR - JIRA API FAILED!
+2026-04-13 17:59:31,551 - ERROR - Status Code: 401
+2026-04-13 17:59:31,552 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 17:59:31,554 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 17:59:31,555 - ERROR - Error: JIRA API error: 401
+2026-04-13 17:59:31,556 - ERROR - ==================================================
+2026-04-13 17:59:31,557 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:31] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 17:59:42,732 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:42] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 17:59:43,035 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:43] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 17:59:43,045 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:43,046 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:43,049 - INFO - Change: 44.87435706527012%
+2026-04-13 17:59:43,052 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:43,053 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 12.9 seconds ago
+2026-04-13 17:59:43,055 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:43] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:43,340 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:43,340 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:43,345 - INFO - Change: 44.87435706527012%
+2026-04-13 17:59:43,346 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:43,347 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 13.2 seconds ago
+2026-04-13 17:59:43,348 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:43] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:46,824 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:46,825 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:46,828 - INFO - Change: 44.87714336068981%
+2026-04-13 17:59:46,829 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:46,829 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:46,831 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 16.7 seconds ago
+2026-04-13 17:59:46,830 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:46,832 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:46,832 - INFO - Change: 44.87714336068981%
+2026-04-13 17:59:46,834 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:46,835 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 16.7 seconds ago
+2026-04-13 17:59:46,840 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:46,841 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:46,842 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:46,844 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:46,844 - INFO - Change: 44.87714336068981%
+2026-04-13 17:59:46,844 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:46,845 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:46,846 - INFO - Change: 44.87714336068981%
+2026-04-13 17:59:46,846 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 16.7 seconds ago
+2026-04-13 17:59:46,847 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:46,848 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:46,853 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 16.7 seconds ago
+2026-04-13 17:59:46,855 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:52,406 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:52] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 17:59:52,709 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:52] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 17:59:52,714 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:52,714 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:52,716 - INFO - Change: 44.87714336068981%
+2026-04-13 17:59:52,717 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:52,718 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 22.5 seconds ago
+2026-04-13 17:59:52,722 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:52] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:53,014 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:53,014 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:53,018 - INFO - Change: 44.87714336068981%
+2026-04-13 17:59:53,019 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:53,019 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 22.8 seconds ago
+2026-04-13 17:59:53,020 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:53] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:54,973 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:54,973 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:54,978 - INFO - Change: 44.87743433933285%
+2026-04-13 17:59:54,979 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:54,979 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:54,979 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:54,980 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 24.8 seconds ago
+2026-04-13 17:59:54,981 - INFO - Change: 44.87743433933285%
+2026-04-13 17:59:54,982 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:54] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:54,983 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:54,989 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 24.8 seconds ago
+2026-04-13 17:59:54,990 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:54] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:55,217 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:55,217 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 17:59:55,218 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:55,221 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 17:59:55,222 - INFO - Change: 44.87743433933285%
+2026-04-13 17:59:55,222 - INFO - Change: 44.87743433933285%
+2026-04-13 17:59:55,223 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:55,224 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 17:59:55,225 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 25.1 seconds ago
+2026-04-13 17:59:55,226 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 25.1 seconds ago
+2026-04-13 17:59:55,227 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:55] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 17:59:55,228 - INFO - 127.0.0.1 - - [13/Apr/2026 17:59:55] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:05,656 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:05] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:05,963 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:05,963 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:05,968 - INFO - Change: 44.87743433933285%
+2026-04-13 18:00:05,969 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:05] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:05,969 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:05,972 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 35.8 seconds ago
+2026-04-13 18:00:05,973 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:05] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:06,273 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:06,274 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:06,277 - INFO - Change: 44.87743433933285%
+2026-04-13 18:00:06,278 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:06,278 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 36.1 seconds ago
+2026-04-13 18:00:06,279 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:06] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:07,441 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:07,442 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:07,445 - INFO - Change: 44.88792467635081%
+2026-04-13 18:00:07,446 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:07,446 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:07,447 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:07,447 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 37.3 seconds ago
+2026-04-13 18:00:07,448 - INFO - Change: 44.88792467635081%
+2026-04-13 18:00:07,449 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:07] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:07,450 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:07,451 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 37.3 seconds ago
+2026-04-13 18:00:07,452 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:07] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:07,462 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:07,462 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:07,463 - INFO - Change: 44.88792467635081%
+2026-04-13 18:00:07,464 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:07,464 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:07,465 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:07,465 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 37.3 seconds ago
+2026-04-13 18:00:07,466 - INFO - Change: 44.88792467635081%
+2026-04-13 18:00:07,467 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:07] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:07,468 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:07,473 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 37.3 seconds ago
+2026-04-13 18:00:07,474 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:07] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:13,677 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:13] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:13,981 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:13] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:13,987 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:13,987 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:13,988 - INFO - Change: 44.88792467635081%
+2026-04-13 18:00:13,989 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:13,989 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 43.8 seconds ago
+2026-04-13 18:00:13,990 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:13] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:14,289 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:14,289 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:14,293 - INFO - Change: 44.88792467635081%
+2026-04-13 18:00:14,293 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:14,294 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 44.1 seconds ago
+2026-04-13 18:00:14,295 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:14] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:25,423 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:25,424 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:25,425 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:25,433 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:25,435 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:25,443 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:25,736 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:25,737 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:25,738 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:25,740 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:25,742 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:25,742 - INFO - Change: 84.36157750878563%
+2026-04-13 18:00:25,743 - INFO - Change: 48.352907476367804%
+2026-04-13 18:00:25,744 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:25,745 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:25,746 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:25,747 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:25,747 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:25,748 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:25,750 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:25,752 - INFO - Change: 89.85809906291833%
+2026-04-13 18:00:25,753 - INFO - Creating JIRA ticket...
+2026-04-13 18:00:25,754 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:25,755 - INFO - Creating JIRA ticket...
+2026-04-13 18:00:25,756 - INFO - Change: 84.36157750878563%
+2026-04-13 18:00:25,756 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:25,757 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:25,758 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_7160904281202017339
+2026-04-13 18:00:25,759 - INFO - Change: 89.85809906291833%
+2026-04-13 18:00:25,759 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_4968115737268023609
+2026-04-13 18:00:25,760 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:25,761 - INFO - Change: 48.352907476367804%
+2026-04-13 18:00:25,761 - INFO - Creating JIRA ticket...
+2026-04-13 18:00:25,766 - INFO - Preparing JIRA ticket data...
+2026-04-13 18:00:25,767 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:25,768 - INFO - Preparing JIRA ticket data...
+2026-04-13 18:00:25,769 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_7160904281202017339 - Last ticket was 0.0 seconds ago
+2026-04-13 18:00:25,769 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:25,770 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_-4871237231927189558
+2026-04-13 18:00:25,770 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 18:00:25,772 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4871237231927189558 - Last ticket was 0.0 seconds ago
+2026-04-13 18:00:25,772 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 18:00:25,774 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:25,774 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_4968115737268023609 - Last ticket was 0.0 seconds ago
+2026-04-13 18:00:25,775 - INFO - Preparing JIRA ticket data...
+2026-04-13 18:00:25,781 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:25,785 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:25] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:25,785 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 18:00:26,249 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,253 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,255 - INFO - Change: 84.36157750878563%
+2026-04-13 18:00:26,256 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,256 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_7160904281202017339 - Last ticket was 0.5 seconds ago
+2026-04-13 18:00:26,259 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,290 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,290 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,293 - INFO - Change: 89.85809906291833%
+2026-04-13 18:00:26,294 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,295 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4871237231927189558 - Last ticket was 0.5 seconds ago
+2026-04-13 18:00:26,301 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,306 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,310 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,315 - INFO - Change: 48.352907476367804%
+2026-04-13 18:00:26,316 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,317 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_4968115737268023609 - Last ticket was 0.6 seconds ago
+2026-04-13 18:00:26,318 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,564 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,564 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,568 - INFO - Change: 84.36157750878563%
+2026-04-13 18:00:26,568 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,569 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_7160904281202017339 - Last ticket was 0.8 seconds ago
+2026-04-13 18:00:26,571 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,630 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,633 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,635 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,635 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,635 - INFO - Change: 89.85809906291833%
+2026-04-13 18:00:26,636 - INFO - Change: 48.352907476367804%
+2026-04-13 18:00:26,637 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,637 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,638 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4871237231927189558 - Last ticket was 0.9 seconds ago
+2026-04-13 18:00:26,642 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,639 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_4968115737268023609 - Last ticket was 0.9 seconds ago
+2026-04-13 18:00:26,647 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,875 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,876 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,879 - INFO - Change: 84.36157750878563%
+2026-04-13 18:00:26,879 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,880 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_7160904281202017339 - Last ticket was 1.1 seconds ago
+2026-04-13 18:00:26,881 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,963 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,963 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,967 - INFO - Change: 89.85809906291833%
+2026-04-13 18:00:26,968 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:26,968 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,969 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:26,970 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4871237231927189558 - Last ticket was 1.2 seconds ago
+2026-04-13 18:00:26,971 - INFO - Change: 48.352907476367804%
+2026-04-13 18:00:26,972 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:26,972 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:26,974 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_4968115737268023609 - Last ticket was 1.2 seconds ago
+2026-04-13 18:00:26,976 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:26] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:27,186 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:27,187 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:27,190 - INFO - Change: 84.36157750878563%
+2026-04-13 18:00:27,191 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:27,192 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_7160904281202017339 - Last ticket was 1.4 seconds ago
+2026-04-13 18:00:27,193 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:27,199 - INFO - JIRA API Response Status: 401
+2026-04-13 18:00:27,201 - ERROR - JIRA API FAILED!
+2026-04-13 18:00:27,202 - ERROR - Status Code: 401
+2026-04-13 18:00:27,202 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 18:00:27,206 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 18:00:27,207 - ERROR - Error: JIRA API error: 401
+2026-04-13 18:00:27,207 - ERROR - ==================================================
+2026-04-13 18:00:27,208 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 18:00:27,214 - INFO - JIRA API Response Status: 401
+2026-04-13 18:00:27,214 - ERROR - JIRA API FAILED!
+2026-04-13 18:00:27,215 - ERROR - Status Code: 401
+2026-04-13 18:00:27,216 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 18:00:27,219 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 18:00:27,219 - ERROR - Error: JIRA API error: 401
+2026-04-13 18:00:27,220 - ERROR - ==================================================
+2026-04-13 18:00:27,221 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 18:00:27,277 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:27,277 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:27,281 - INFO - Change: 89.85809906291833%
+2026-04-13 18:00:27,282 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:27,282 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4871237231927189558 - Last ticket was 1.5 seconds ago
+2026-04-13 18:00:27,284 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:27,284 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:27,285 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 18:00:27,286 - INFO - Change: 48.352907476367804%
+2026-04-13 18:00:27,287 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:27,288 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_4968115737268023609 - Last ticket was 1.5 seconds ago
+2026-04-13 18:00:27,295 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:27,341 - INFO - JIRA API Response Status: 401
+2026-04-13 18:00:27,341 - ERROR - JIRA API FAILED!
+2026-04-13 18:00:27,344 - ERROR - Status Code: 401
+2026-04-13 18:00:27,345 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 18:00:27,350 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 18:00:27,351 - ERROR - Error: JIRA API error: 401
+2026-04-13 18:00:27,352 - ERROR - ==================================================
+2026-04-13 18:00:27,353 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 18:00:27,497 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:27,498 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:27,501 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:27,502 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:27,503 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 57.3 seconds ago
+2026-04-13 18:00:27,504 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:27,513 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:27,513 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:27,514 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:27,516 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:27,516 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 57.3 seconds ago
+2026-04-13 18:00:27,518 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:27] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:32,448 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:32] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:32,455 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:32] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:32,698 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:32,698 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:32,703 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:32,703 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:32,705 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 62.5 seconds ago
+2026-04-13 18:00:32,707 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:32] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:32,754 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:32,754 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:32,758 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:32,758 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:32,759 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 62.6 seconds ago
+2026-04-13 18:00:32,760 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:32] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:34,210 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:34,211 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:34,215 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:34,216 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:34,217 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 64.0 seconds ago
+2026-04-13 18:00:34,218 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:34] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:34,513 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:34,514 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:34,517 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:34,518 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:34,519 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 64.3 seconds ago
+2026-04-13 18:00:34,520 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:34] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:34,530 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:34,530 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:34,531 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:34,532 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:34,533 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:34,533 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 64.4 seconds ago
+2026-04-13 18:00:34,534 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:34,535 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:34] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:34,536 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:34,538 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:34,541 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 64.4 seconds ago
+2026-04-13 18:00:34,543 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:34] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:44,139 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:44,147 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:44,153 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:44,158 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 18:00:44,393 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:44,393 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:44,397 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:44,397 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:44,398 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 74.2 seconds ago
+2026-04-13 18:00:44,400 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:44,447 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:44,447 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:44,451 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:44,452 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:44,454 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:44,454 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:44,455 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:44,454 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 74.3 seconds ago
+2026-04-13 18:00:44,456 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:44,458 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 74.3 seconds ago
+2026-04-13 18:00:44,457 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:44,459 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:00:44,467 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 18:00:44,468 - INFO - Metric: go_gc_duration_seconds_sum
+2026-04-13 18:00:44,469 - INFO - Change: 44.88811916023315%
+2026-04-13 18:00:44,469 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 18:00:44,470 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_sum_-7688986723984041218 - Last ticket was 74.3 seconds ago
+2026-04-13 18:00:44,471 - INFO - 127.0.0.1 - - [13/Apr/2026 18:00:44] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 18:51:05,434 - INFO -  * Detected change in 'C:\\Users\\Administrator\\Desktop\\Grafana\\backend\\app.py', reloading
+2026-04-13 18:51:05,604 - INFO -  * Restarting with stat
+2026-04-13 18:51:06,586 - INFO - JIRA Client initialized
+2026-04-13 18:51:06,586 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 18:51:06,592 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 18:51:06,592 - INFO - Project: OCI
+2026-04-13 18:51:06,598 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 18:51:06,599 - INFO - ==================================================
+2026-04-13 18:51:06,604 - INFO - JIRA Client initialized
+2026-04-13 18:51:06,604 - INFO - Hourly scheduler started in background thread
+2026-04-13 18:51:06,605 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 18:51:06,607 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 18:51:06,608 - INFO - Project: OCI
+2026-04-13 18:51:06,647 - WARNING -  * Debugger is active!
+2026-04-13 18:51:06,651 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 18:58:43,028 - INFO - ==================================================
+2026-04-13 18:58:43,029 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 18:58:43,034 - INFO - Current time: 2026-04-13 18:58:43
+2026-04-13 18:58:43,035 - INFO - No critical metrics to check
+2026-04-13 18:58:43,035 - INFO - ==================================================
+2026-04-13 19:15:17,029 - INFO - JIRA Client initialized
+2026-04-13 19:15:17,030 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 19:15:17,036 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 19:15:17,037 - INFO - Project: OCI
+2026-04-13 19:15:17,042 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 19:15:17,042 - INFO - ==================================================
+2026-04-13 19:15:17,046 - INFO - JIRA Client initialized
+2026-04-13 19:15:17,046 - INFO - Hourly scheduler started in background thread
+2026-04-13 19:15:17,047 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 19:15:17,049 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 19:15:17,049 - INFO - Project: OCI
+2026-04-13 19:15:17,101 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 19:15:17,102 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 19:15:17,108 - INFO -  * Restarting with stat
+2026-04-13 19:15:17,849 - INFO - JIRA Client initialized
+2026-04-13 19:15:17,849 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 19:15:17,852 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 19:15:17,853 - INFO - Project: OCI
+2026-04-13 19:15:17,858 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 19:15:17,858 - INFO - ==================================================
+2026-04-13 19:15:17,862 - INFO - JIRA Client initialized
+2026-04-13 19:15:17,862 - INFO - Hourly scheduler started in background thread
+2026-04-13 19:15:17,863 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 19:15:17,865 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 19:15:17,865 - INFO - Project: OCI
+2026-04-13 19:15:17,901 - WARNING -  * Debugger is active!
+2026-04-13 19:15:17,905 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 19:15:48,245 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:48] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:15:48,251 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:48] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:15:48,494 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:48,495 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:48,499 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:48,500 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:48,500 - INFO - Creating JIRA ticket...
+2026-04-13 19:15:48,502 - INFO - Added/Updated critical metric in store: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705
+2026-04-13 19:15:48,503 - INFO - Preparing JIRA ticket data...
+2026-04-13 19:15:48,505 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 19:15:48,550 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:48,551 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:48,554 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:48,555 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:48,555 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 0.1 seconds ago
+2026-04-13 19:15:48,557 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:50,392 - INFO - JIRA API Response Status: 401
+2026-04-13 19:15:50,392 - ERROR - JIRA API FAILED!
+2026-04-13 19:15:50,397 - ERROR - Status Code: 401
+2026-04-13 19:15:50,398 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 19:15:50,402 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 19:15:50,402 - ERROR - Error: JIRA API error: 401
+2026-04-13 19:15:50,403 - ERROR - ==================================================
+2026-04-13 19:15:50,404 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:50] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 19:15:51,036 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:51,048 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:51,054 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:51,057 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:51,058 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 2.6 seconds ago
+2026-04-13 19:15:51,060 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:51] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:51,338 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:51,339 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:51,342 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:51,342 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:51,344 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 2.8 seconds ago
+2026-04-13 19:15:51,345 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:51] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:53,270 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:53,271 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:53,272 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:53,275 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:53,276 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:53,277 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:53,277 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:53,278 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:53,279 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 4.8 seconds ago
+2026-04-13 19:15:53,280 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 4.8 seconds ago
+2026-04-13 19:15:53,281 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:53] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:53,282 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:53] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:53,290 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:53,291 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:53,291 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:53,292 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:53,293 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:53,293 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:53,295 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:53,294 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 4.8 seconds ago
+2026-04-13 19:15:53,297 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:53,301 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 4.8 seconds ago
+2026-04-13 19:15:53,301 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:53] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:53,302 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:53] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:54,982 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:54] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:15:55,284 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:55] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:15:55,290 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:55,290 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:55,292 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:55,293 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:55,294 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 6.8 seconds ago
+2026-04-13 19:15:55,295 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:55] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:55,588 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:55,589 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:55,592 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:55,593 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:55,594 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 7.1 seconds ago
+2026-04-13 19:15:55,595 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:55] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:56,639 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:56,640 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:56,643 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:56,644 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:56,645 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:56,644 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:56,646 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 8.1 seconds ago
+2026-04-13 19:15:56,645 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:56,647 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:56] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:56,648 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:56,650 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 8.1 seconds ago
+2026-04-13 19:15:56,654 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:56] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:56,890 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:56,891 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:56,891 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:56,894 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:56,895 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:56,896 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:56,896 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:56,897 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:56,898 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 8.4 seconds ago
+2026-04-13 19:15:56,899 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 8.4 seconds ago
+2026-04-13 19:15:56,900 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:56] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:56,901 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:56] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:58,087 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:58,102 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:58,106 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:58,107 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:58,108 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 9.6 seconds ago
+2026-04-13 19:15:58,110 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:58] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:58,397 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:58,397 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:58,401 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:58,401 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:58,402 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 9.9 seconds ago
+2026-04-13 19:15:58,403 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:58] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:58,418 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:58,418 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:58,420 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:15:58,420 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:58,420 - INFO - Metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 19:15:58,425 - INFO - Change: 36.96725002326934%
+2026-04-13 19:15:58,425 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:58,426 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:15:58,427 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 9.9 seconds ago
+2026-04-13 19:15:58,428 - WARNING - DUPLICATE ALERT REJECTED: cloudwatch_exporter_scrape_duration_seconds_-2535527112029841705 - Last ticket was 9.9 seconds ago
+2026-04-13 19:15:58,429 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:58] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:15:58,430 - INFO - 127.0.0.1 - - [13/Apr/2026 19:15:58] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:01,930 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:01] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:01,932 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:01] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:01,937 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:01] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:01,939 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:01] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:01,942 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:01] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:01,947 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:01] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:02,236 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:02] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:02,242 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:02] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:02,244 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:02,245 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:02,246 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:02,246 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:02,246 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:02,247 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:02,250 - INFO - Change: 48.65053978408637%
+2026-04-13 19:16:02,252 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:02,252 - INFO - Creating JIRA ticket...
+2026-04-13 19:16:02,253 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:02,253 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:02,254 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:02,254 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_-4872866976171325093
+2026-04-13 19:16:02,255 - INFO - Creating JIRA ticket...
+2026-04-13 19:16:02,255 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:02,256 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:02,257 - INFO - Preparing JIRA ticket data...
+2026-04-13 19:16:02,258 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_-4692554985569669929
+2026-04-13 19:16:02,259 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:02,260 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:02,265 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 19:16:02,266 - INFO - Preparing JIRA ticket data...
+2026-04-13 19:16:02,267 - INFO - Creating JIRA ticket...
+2026-04-13 19:16:02,269 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:02,271 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 19:16:02,272 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_-367049352478336812
+2026-04-13 19:16:02,272 - INFO - Creating JIRA ticket...
+2026-04-13 19:16:02,278 - INFO - Added/Updated critical metric in store: go_gc_duration_seconds_-5231455064803356592
+2026-04-13 19:16:02,278 - INFO - Preparing JIRA ticket data...
+2026-04-13 19:16:02,280 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 19:16:02,279 - INFO - Preparing JIRA ticket data...
+2026-04-13 19:16:02,283 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 19:16:02,688 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:02,706 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:02,752 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:02,753 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:02,762 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:02,766 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:02,767 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 0.5 seconds ago
+2026-04-13 19:16:02,767 - INFO - Change: 48.65053978408637%
+2026-04-13 19:16:02,769 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:02] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:02,769 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:02,771 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 0.5 seconds ago
+2026-04-13 19:16:02,773 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:02] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:03,121 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:03,128 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:03,141 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:03,142 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:03,142 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:03,143 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:03,143 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:03,144 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 0.9 seconds ago
+2026-04-13 19:16:03,146 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:03] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:03,145 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:03,147 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 0.9 seconds ago
+2026-04-13 19:16:03,152 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:03] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:03,728 - INFO - JIRA API Response Status: 401
+2026-04-13 19:16:03,728 - ERROR - JIRA API FAILED!
+2026-04-13 19:16:03,732 - ERROR - Status Code: 401
+2026-04-13 19:16:03,733 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 19:16:03,737 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 19:16:03,737 - ERROR - Error: JIRA API error: 401
+2026-04-13 19:16:03,738 - ERROR - ==================================================
+2026-04-13 19:16:03,740 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:03] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 19:16:03,774 - INFO - JIRA API Response Status: 401
+2026-04-13 19:16:03,775 - ERROR - JIRA API FAILED!
+2026-04-13 19:16:03,778 - ERROR - Status Code: 401
+2026-04-13 19:16:03,778 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 19:16:03,780 - INFO - JIRA API Response Status: 401
+2026-04-13 19:16:03,783 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 19:16:03,783 - ERROR - JIRA API FAILED!
+2026-04-13 19:16:03,783 - ERROR - Error: JIRA API error: 401
+2026-04-13 19:16:03,784 - ERROR - Status Code: 401
+2026-04-13 19:16:03,785 - ERROR - ==================================================
+2026-04-13 19:16:03,785 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 19:16:03,791 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:03] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 19:16:03,793 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 19:16:03,794 - ERROR - Error: JIRA API error: 401
+2026-04-13 19:16:03,794 - ERROR - ==================================================
+2026-04-13 19:16:03,797 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:03] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 19:16:03,836 - INFO - JIRA API Response Status: 401
+2026-04-13 19:16:03,836 - ERROR - JIRA API FAILED!
+2026-04-13 19:16:03,840 - ERROR - Status Code: 401
+2026-04-13 19:16:03,841 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 19:16:03,845 - ERROR - FAILED TO CREATE JIRA TICKET!
+2026-04-13 19:16:03,846 - ERROR - Error: JIRA API error: 401
+2026-04-13 19:16:03,846 - ERROR - ==================================================
+2026-04-13 19:16:03,848 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:03] "[35m[1mPOST /api/alert HTTP/1.1[0m" 500 -
+2026-04-13 19:16:11,173 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,174 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,176 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,181 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,183 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,189 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,479 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,486 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:11,488 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,489 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,491 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:11,491 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,490 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,494 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,494 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,495 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,495 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,496 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 9.2 seconds ago
+2026-04-13 19:16:11,497 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,497 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:11,498 - INFO - Change: 48.65053978408637%
+2026-04-13 19:16:11,500 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,500 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:11,501 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,505 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,509 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 9.3 seconds ago
+2026-04-13 19:16:11,510 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,508 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,509 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 9.2 seconds ago
+2026-04-13 19:16:11,515 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 9.2 seconds ago
+2026-04-13 19:16:11,520 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,521 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,785 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,785 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,789 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:11,791 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,792 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 9.5 seconds ago
+2026-04-13 19:16:11,794 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,795 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,794 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,797 - INFO - Change: 48.65053978408637%
+2026-04-13 19:16:11,804 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,806 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 9.5 seconds ago
+2026-04-13 19:16:11,808 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,812 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,816 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,818 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:11,819 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:11,820 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:11,822 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,822 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:11,823 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 9.6 seconds ago
+2026-04-13 19:16:11,824 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:11,825 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:11,829 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 9.6 seconds ago
+2026-04-13 19:16:11,831 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:11] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,161 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,167 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,170 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,173 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,177 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,179 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,466 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,472 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:23,474 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,475 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,476 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:23,476 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,477 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 21.2 seconds ago
+2026-04-13 19:16:23,481 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,483 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,484 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,486 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,486 - INFO - Change: 48.6948694869487%
+2026-04-13 19:16:23,487 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,488 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,488 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,487 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,489 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:23,489 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 21.2 seconds ago
+2026-04-13 19:16:23,493 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:23,494 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,496 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,497 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,499 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 21.2 seconds ago
+2026-04-13 19:16:23,501 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,501 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 21.2 seconds ago
+2026-04-13 19:16:23,507 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,773 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,773 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,777 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:23,778 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,779 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,779 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 21.5 seconds ago
+2026-04-13 19:16:23,779 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,781 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,781 - INFO - Change: 48.6948694869487%
+2026-04-13 19:16:23,783 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,784 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 21.5 seconds ago
+2026-04-13 19:16:23,788 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,790 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,790 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,791 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:23,792 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,792 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 21.5 seconds ago
+2026-04-13 19:16:23,793 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:23,805 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:23,806 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:23,806 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:23,807 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:23,808 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 21.5 seconds ago
+2026-04-13 19:16:23,809 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:23] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:28,475 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:28,780 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:28,782 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:28,783 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:28,787 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:28,790 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:28,791 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:28,793 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:28,797 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:28,798 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 26.5 seconds ago
+2026-04-13 19:16:28,799 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:28,800 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:28,800 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:28,802 - INFO - Change: 48.6948694869487%
+2026-04-13 19:16:28,802 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:28,804 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 26.5 seconds ago
+2026-04-13 19:16:28,804 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:28] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:29,087 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:29,088 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:29,091 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:29,092 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:29,093 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:29,094 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 26.8 seconds ago
+2026-04-13 19:16:29,094 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:29,093 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:29,095 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:29] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:29,096 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:29,096 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:29,096 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:29,098 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:29,102 - INFO - Change: 48.6948694869487%
+2026-04-13 19:16:29,103 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:29,104 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:29,105 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:29,106 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:29,106 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 26.8 seconds ago
+2026-04-13 19:16:29,107 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:29,108 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 26.8 seconds ago
+2026-04-13 19:16:29,109 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:29,109 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:29,110 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:29] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:29,114 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 26.8 seconds ago
+2026-04-13 19:16:29,115 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:29] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:29,116 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:29,117 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:29,120 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:29] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:29,122 - INFO - Change: 87.74145986635196%
+2026-04-13 19:16:29,122 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:29,128 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:29,131 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 26.9 seconds ago
+2026-04-13 19:16:29,130 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 26.9 seconds ago
+2026-04-13 19:16:29,133 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:29] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:29,132 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:29] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:37,388 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,390 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,396 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,398 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,401 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,405 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,695 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,700 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,703 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,705 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,708 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,711 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:37,998 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:37] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:38,003 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:38,007 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:38,011 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:16:38,014 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,016 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,017 - INFO - Change: 87.78492264229531%
+2026-04-13 19:16:38,018 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,019 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 35.8 seconds ago
+2026-04-13 19:16:38,021 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,037 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,042 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,043 - INFO - Change: 48.64486448644865%
+2026-04-13 19:16:38,044 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,044 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 35.8 seconds ago
+2026-04-13 19:16:38,046 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,302 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,303 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,306 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:38,307 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,308 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,308 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,308 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 36.0 seconds ago
+2026-04-13 19:16:38,310 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:38,311 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,312 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,313 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,313 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 36.0 seconds ago
+2026-04-13 19:16:38,319 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,320 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,318 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,322 - INFO - Change: 87.78492264229531%
+2026-04-13 19:16:38,321 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,323 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,324 - INFO - Change: 48.64486448644865%
+2026-04-13 19:16:38,325 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 36.1 seconds ago
+2026-04-13 19:16:38,325 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,327 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,335 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 36.1 seconds ago
+2026-04-13 19:16:38,338 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,343 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,346 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,346 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:38,347 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,348 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 36.1 seconds ago
+2026-04-13 19:16:38,349 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,354 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,358 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,361 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:38,361 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,363 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 36.1 seconds ago
+2026-04-13 19:16:38,366 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,616 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,617 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,620 - INFO - Change: 87.78492264229531%
+2026-04-13 19:16:38,621 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,621 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 36.4 seconds ago
+2026-04-13 19:16:38,623 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,625 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,626 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,627 - INFO - Change: 48.64486448644865%
+2026-04-13 19:16:38,628 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,632 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 36.4 seconds ago
+2026-04-13 19:16:38,633 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,644 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,644 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,645 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:38,646 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,646 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,647 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,647 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 36.4 seconds ago
+2026-04-13 19:16:38,648 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:38,649 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,650 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,651 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 36.4 seconds ago
+2026-04-13 19:16:38,652 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,658 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,659 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,659 - INFO - Change: 87.78492264229531%
+2026-04-13 19:16:38,660 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,661 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 36.4 seconds ago
+2026-04-13 19:16:38,662 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,673 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,674 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,675 - INFO - Change: 48.64486448644865%
+2026-04-13 19:16:38,676 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,677 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 36.4 seconds ago
+2026-04-13 19:16:38,681 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,927 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,928 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,931 - INFO - Change: 63.17606036455204%
+2026-04-13 19:16:38,932 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,934 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 36.7 seconds ago
+2026-04-13 19:16:38,935 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:16:38,938 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:16:38,938 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:16:38,939 - INFO - Change: 80.18337538529136%
+2026-04-13 19:16:38,943 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:16:38,944 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 36.7 seconds ago
+2026-04-13 19:16:38,945 - INFO - 127.0.0.1 - - [13/Apr/2026 19:16:38] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:45,473 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,475 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,479 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,482 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,486 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,492 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,780 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,784 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,787 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,790 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,795 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:45,799 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:45] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:46,102 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:46,123 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:46,154 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:46,165 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "OPTIONS /api/alert HTTP/1.1" 200 -
+2026-04-13 19:19:46,168 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,169 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,170 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:46,173 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,180 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,180 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,182 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 223.9 seconds ago
+2026-04-13 19:19:46,181 - INFO - Change: 48.64486448644865%
+2026-04-13 19:19:46,184 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,183 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,185 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 223.9 seconds ago
+2026-04-13 19:19:46,191 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,409 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,409 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,413 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:46,414 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,415 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 224.1 seconds ago
+2026-04-13 19:19:46,416 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,462 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,462 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,466 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:46,467 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,468 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,468 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,469 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 224.2 seconds ago
+2026-04-13 19:19:46,470 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:46,471 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,471 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,473 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 224.2 seconds ago
+2026-04-13 19:19:46,478 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,483 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,484 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,487 - INFO - Change: 48.64486448644865%
+2026-04-13 19:19:46,489 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,491 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 224.2 seconds ago
+2026-04-13 19:19:46,492 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,501 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,501 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,502 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:46,503 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,504 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,504 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 224.2 seconds ago
+2026-04-13 19:19:46,505 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,506 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,506 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:46,508 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,510 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 224.2 seconds ago
+2026-04-13 19:19:46,515 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,719 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,720 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,723 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:46,724 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,724 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 224.5 seconds ago
+2026-04-13 19:19:46,725 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,777 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,777 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,781 - INFO - Change: 48.64486448644865%
+2026-04-13 19:19:46,781 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,782 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 224.5 seconds ago
+2026-04-13 19:19:46,784 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,783 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,786 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,786 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:46,787 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,788 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 224.5 seconds ago
+2026-04-13 19:19:46,789 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,798 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,798 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,799 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:46,800 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,801 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 224.5 seconds ago
+2026-04-13 19:19:46,802 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,811 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,812 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,812 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:46,813 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,814 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 224.6 seconds ago
+2026-04-13 19:19:46,819 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:46,820 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:46,820 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:46,821 - INFO - Change: 48.64486448644865%
+2026-04-13 19:19:46,822 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:46,823 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 224.6 seconds ago
+2026-04-13 19:19:46,824 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:46] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,029 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,030 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,033 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:47,033 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,034 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 224.8 seconds ago
+2026-04-13 19:19:47,035 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,090 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,091 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,094 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:47,095 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,096 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 224.8 seconds ago
+2026-04-13 19:19:47,097 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,101 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,102 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,106 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:47,107 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,107 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 224.9 seconds ago
+2026-04-13 19:19:47,109 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,114 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,117 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,118 - INFO - Change: 48.44895090854332%
+2026-04-13 19:19:47,119 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,120 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 224.9 seconds ago
+2026-04-13 19:19:47,121 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,125 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,126 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,142 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:47,144 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,145 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 224.9 seconds ago
+2026-04-13 19:19:47,147 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,150 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,153 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,157 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:47,158 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,158 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 224.9 seconds ago
+2026-04-13 19:19:47,159 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,340 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,341 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,344 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:47,345 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,345 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 225.1 seconds ago
+2026-04-13 19:19:47,346 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,401 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,402 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,405 - INFO - Change: 48.44895090854332%
+2026-04-13 19:19:47,405 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,406 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 225.1 seconds ago
+2026-04-13 19:19:47,408 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,416 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,417 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,417 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:47,418 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,419 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 225.1 seconds ago
+2026-04-13 19:19:47,420 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,431 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,431 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,432 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:47,433 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,434 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 225.2 seconds ago
+2026-04-13 19:19:47,435 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,540 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,541 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,541 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,544 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,544 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:47,546 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,545 - INFO - Change: 48.44895090854332%
+2026-04-13 19:19:47,547 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 225.3 seconds ago
+2026-04-13 19:19:47,550 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,549 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,551 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 225.3 seconds ago
+2026-04-13 19:19:47,556 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,651 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,651 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,655 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:47,656 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,657 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 225.4 seconds ago
+2026-04-13 19:19:47,658 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,712 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,713 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,716 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:47,716 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,717 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 225.4 seconds ago
+2026-04-13 19:19:47,719 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,732 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,732 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,735 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:47,737 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,738 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 225.5 seconds ago
+2026-04-13 19:19:47,739 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,743 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,744 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,744 - INFO - Change: 48.44895090854332%
+2026-04-13 19:19:47,745 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,746 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 225.5 seconds ago
+2026-04-13 19:19:47,751 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,854 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,854 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,857 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:47,858 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,860 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 225.6 seconds ago
+2026-04-13 19:19:47,861 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,864 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,864 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,865 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:47,869 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,870 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 225.6 seconds ago
+2026-04-13 19:19:47,871 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:47,963 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:47,963 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:47,967 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:47,968 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:47,969 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 225.7 seconds ago
+2026-04-13 19:19:47,970 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:47] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,022 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,023 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,027 - INFO - Change: 48.44895090854332%
+2026-04-13 19:19:48,028 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,029 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 225.8 seconds ago
+2026-04-13 19:19:48,030 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,044 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,045 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,046 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:48,051 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,052 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 225.8 seconds ago
+2026-04-13 19:19:48,053 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,056 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,056 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,057 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:48,058 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,058 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 225.8 seconds ago
+2026-04-13 19:19:48,060 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,167 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,167 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,173 - INFO - Change: 87.78492264229531%
+2026-04-13 19:19:48,173 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,174 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4872866976171325093 - Last ticket was 225.9 seconds ago
+2026-04-13 19:19:48,175 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,179 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,182 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,183 - INFO - Change: 48.44895090854332%
+2026-04-13 19:19:48,184 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,185 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-4692554985569669929 - Last ticket was 225.9 seconds ago
+2026-04-13 19:19:48,186 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,275 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,275 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,278 - INFO - Change: 63.17606036455204%
+2026-04-13 19:19:48,279 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,280 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-367049352478336812 - Last ticket was 226.0 seconds ago
+2026-04-13 19:19:48,281 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 19:19:48,334 - INFO - CRITICAL ALERT RECEIVED!
+2026-04-13 19:19:48,334 - INFO - Metric: go_gc_duration_seconds
+2026-04-13 19:19:48,338 - INFO - Change: 80.18337538529136%
+2026-04-13 19:19:48,338 - INFO - Thresholds: Warning 15%, Critical 25%
+2026-04-13 19:19:48,339 - WARNING - DUPLICATE ALERT REJECTED: go_gc_duration_seconds_-5231455064803356592 - Last ticket was 226.1 seconds ago
+2026-04-13 19:19:48,341 - INFO - 127.0.0.1 - - [13/Apr/2026 19:19:48] "[31m[1mPOST /api/alert HTTP/1.1[0m" 429 -
+2026-04-13 20:15:17,121 - INFO - ==================================================
+2026-04-13 20:15:17,122 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 20:15:17,125 - INFO - Current time: 2026-04-13 20:15:17
+2026-04-13 20:15:17,126 - INFO - No critical metrics to check
+2026-04-13 20:15:17,127 - INFO - ==================================================
+2026-04-13 20:15:18,341 - INFO - ==================================================
+2026-04-13 20:15:18,342 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 20:15:18,344 - INFO - Current time: 2026-04-13 20:15:18
+2026-04-13 20:15:18,345 - INFO - Creating hourly ticket for persistent critical metric: cloudwatch_exporter_scrape_duration_seconds
+2026-04-13 20:15:18,345 - INFO - Preparing JIRA ticket data...
+2026-04-13 20:15:18,346 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 20:15:19,890 - INFO - JIRA API Response Status: 401
+2026-04-13 20:15:19,891 - ERROR - JIRA API FAILED!
+2026-04-13 20:15:19,893 - ERROR - Status Code: 401
+2026-04-13 20:15:19,894 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 20:15:19,898 - ERROR - FAILED TO CREATE HOURLY TICKET!
+2026-04-13 20:15:19,898 - ERROR - Error: JIRA API error: 401
+2026-04-13 20:15:19,899 - INFO - Creating hourly ticket for persistent critical metric: go_gc_duration_seconds
+2026-04-13 20:15:19,899 - INFO - Preparing JIRA ticket data...
+2026-04-13 20:15:19,900 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 20:15:21,255 - INFO - JIRA API Response Status: 401
+2026-04-13 20:15:21,256 - ERROR - JIRA API FAILED!
+2026-04-13 20:15:21,258 - ERROR - Status Code: 401
+2026-04-13 20:15:21,259 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 20:15:21,261 - ERROR - FAILED TO CREATE HOURLY TICKET!
+2026-04-13 20:15:21,262 - ERROR - Error: JIRA API error: 401
+2026-04-13 20:15:21,262 - INFO - Creating hourly ticket for persistent critical metric: go_gc_duration_seconds
+2026-04-13 20:15:21,263 - INFO - Preparing JIRA ticket data...
+2026-04-13 20:15:21,264 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 20:15:22,442 - INFO - JIRA API Response Status: 401
+2026-04-13 20:15:22,442 - ERROR - JIRA API FAILED!
+2026-04-13 20:15:22,444 - ERROR - Status Code: 401
+2026-04-13 20:15:22,445 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 20:15:22,448 - ERROR - FAILED TO CREATE HOURLY TICKET!
+2026-04-13 20:15:22,448 - ERROR - Error: JIRA API error: 401
+2026-04-13 20:15:22,449 - INFO - Creating hourly ticket for persistent critical metric: go_gc_duration_seconds
+2026-04-13 20:15:22,450 - INFO - Preparing JIRA ticket data...
+2026-04-13 20:15:22,451 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 20:15:23,658 - INFO - JIRA API Response Status: 401
+2026-04-13 20:15:23,659 - ERROR - JIRA API FAILED!
+2026-04-13 20:15:23,661 - ERROR - Status Code: 401
+2026-04-13 20:15:23,662 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 20:15:23,665 - ERROR - FAILED TO CREATE HOURLY TICKET!
+2026-04-13 20:15:23,665 - ERROR - Error: JIRA API error: 401
+2026-04-13 20:15:23,666 - INFO - Creating hourly ticket for persistent critical metric: go_gc_duration_seconds
+2026-04-13 20:15:23,667 - INFO - Preparing JIRA ticket data...
+2026-04-13 20:15:23,667 - INFO - Sending request to JIRA API: https://omandatapark-sandbox-811.atlassian.net/rest/api/3/issue
+2026-04-13 20:15:24,736 - INFO - JIRA API Response Status: 401
+2026-04-13 20:15:24,737 - ERROR - JIRA API FAILED!
+2026-04-13 20:15:24,739 - ERROR - Status Code: 401
+2026-04-13 20:15:24,740 - ERROR - Response Text: {"errorMessages":["You do not have permission to create issues in this project."],"errors":{}}
+2026-04-13 20:15:24,744 - ERROR - FAILED TO CREATE HOURLY TICKET!
+2026-04-13 20:15:24,744 - ERROR - Error: JIRA API error: 401
+2026-04-13 20:15:24,745 - INFO - ==================================================
+2026-04-13 21:00:07,315 - INFO - JIRA Client initialized
+2026-04-13 21:00:07,316 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:00:07,321 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:00:07,322 - INFO - Project: OCI
+2026-04-13 21:00:07,328 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 21:00:07,328 - INFO - ==================================================
+2026-04-13 21:00:07,331 - INFO - JIRA Client initialized
+2026-04-13 21:00:07,331 - INFO - Hourly scheduler started in background thread
+2026-04-13 21:00:07,333 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:00:07,335 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:00:07,336 - INFO - Project: OCI
+2026-04-13 21:00:07,403 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 21:00:07,404 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 21:00:07,411 - INFO -  * Restarting with stat
+2026-04-13 21:00:08,283 - INFO - JIRA Client initialized
+2026-04-13 21:00:08,283 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:00:08,286 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:00:08,287 - INFO - Project: OCI
+2026-04-13 21:00:08,292 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 21:00:08,292 - INFO - ==================================================
+2026-04-13 21:00:08,299 - INFO - JIRA Client initialized
+2026-04-13 21:00:08,299 - INFO - Hourly scheduler started in background thread
+2026-04-13 21:00:08,299 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:00:08,301 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:00:08,302 - INFO - Project: OCI
+2026-04-13 21:00:08,338 - WARNING -  * Debugger is active!
+2026-04-13 21:00:08,341 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 21:08:58,519 - INFO - JIRA Client initialized
+2026-04-13 21:08:58,520 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:08:58,525 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:08:58,525 - INFO - Project: OCI
+2026-04-13 21:08:58,531 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 21:08:58,531 - INFO - ==================================================
+2026-04-13 21:08:58,538 - INFO - JIRA Client initialized
+2026-04-13 21:08:58,538 - INFO - Hourly scheduler started in background thread
+2026-04-13 21:08:58,538 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:08:58,540 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:08:58,541 - INFO - Project: OCI
+2026-04-13 21:08:58,600 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 21:08:58,600 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 21:08:58,607 - INFO -  * Restarting with stat
+2026-04-13 21:08:59,326 - INFO - JIRA Client initialized
+2026-04-13 21:08:59,326 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:08:59,330 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:08:59,331 - INFO - Project: OCI
+2026-04-13 21:08:59,336 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 21:08:59,337 - INFO - ==================================================
+2026-04-13 21:08:59,339 - INFO - JIRA Client initialized
+2026-04-13 21:08:59,339 - INFO - Hourly scheduler started in background thread
+2026-04-13 21:08:59,341 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:08:59,342 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:08:59,343 - INFO - Project: OCI
+2026-04-13 21:08:59,373 - WARNING -  * Debugger is active!
+2026-04-13 21:08:59,377 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 21:10:52,053 - INFO - 127.0.0.1 - - [13/Apr/2026 21:10:52] "GET /api/v1/label/__name__/values?source=vcenter-prom HTTP/1.1" 200 -
+2026-04-13 21:11:08,861 - INFO - 127.0.0.1 - - [13/Apr/2026 21:11:08] "GET /api/v1/label/__name__/values?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-13 21:11:27,874 - INFO - 127.0.0.1 - - [13/Apr/2026 21:11:27] "GET /api/v1/label/__name__/values?source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-13 21:34:21,860 - INFO - JIRA Client initialized
+2026-04-13 21:34:21,860 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:34:21,865 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:34:21,866 - INFO - Project: OCI
+2026-04-13 21:34:21,871 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 21:34:21,871 - INFO - ==================================================
+2026-04-13 21:34:21,877 - INFO - JIRA Client initialized
+2026-04-13 21:34:21,877 - INFO - Hourly scheduler started in background thread
+2026-04-13 21:34:21,877 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:34:21,879 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:34:21,880 - INFO - Project: OCI
+2026-04-13 21:34:21,937 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 21:34:21,938 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 21:34:21,945 - INFO -  * Restarting with stat
+2026-04-13 21:34:22,698 - INFO - JIRA Client initialized
+2026-04-13 21:34:22,699 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:34:22,702 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:34:22,703 - INFO - Project: OCI
+2026-04-13 21:34:22,709 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 21:34:22,712 - INFO - ==================================================
+2026-04-13 21:34:22,714 - INFO - JIRA Client initialized
+2026-04-13 21:34:22,714 - INFO - Hourly scheduler started in background thread
+2026-04-13 21:34:22,715 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 21:34:22,716 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 21:34:22,717 - INFO - Project: OCI
+2026-04-13 21:34:22,750 - WARNING -  * Debugger is active!
+2026-04-13 21:34:22,754 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 22:03:52,557 - INFO - JIRA Client initialized
+2026-04-13 22:03:52,557 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 22:03:52,563 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 22:03:52,564 - INFO - Project: OCI
+2026-04-13 22:03:52,571 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 22:03:52,571 - INFO - ==================================================
+2026-04-13 22:03:52,580 - INFO - JIRA Client initialized
+2026-04-13 22:03:52,580 - INFO - Hourly scheduler started in background thread
+2026-04-13 22:03:52,580 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 22:03:52,583 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 22:03:52,584 - INFO - Project: OCI
+2026-04-13 22:03:52,711 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 22:03:52,712 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 22:03:52,723 - INFO -  * Restarting with stat
+2026-04-13 22:03:53,713 - INFO - JIRA Client initialized
+2026-04-13 22:03:53,713 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 22:03:53,719 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 22:03:53,720 - INFO - Project: OCI
+2026-04-13 22:03:53,724 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 22:03:53,725 - INFO - ==================================================
+2026-04-13 22:03:53,731 - INFO - JIRA Client initialized
+2026-04-13 22:03:53,731 - INFO - Hourly scheduler started in background thread
+2026-04-13 22:03:53,732 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 22:03:53,733 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 22:03:53,734 - INFO - Project: OCI
+2026-04-13 22:03:53,776 - WARNING -  * Debugger is active!
+2026-04-13 22:03:53,781 - INFO -  * Debugger PIN: 389-036-213
+2026-04-13 23:03:52,700 - INFO - ==================================================
+2026-04-13 23:03:52,701 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 23:03:52,705 - INFO - Current time: 2026-04-13 23:03:52
+2026-04-13 23:03:52,706 - INFO - No critical metrics to check
+2026-04-13 23:03:52,707 - INFO - ==================================================
+2026-04-13 23:03:55,282 - INFO - ==================================================
+2026-04-13 23:03:55,288 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-13 23:03:55,292 - INFO - Current time: 2026-04-13 23:03:55
+2026-04-13 23:03:55,293 - INFO - No critical metrics to check
+2026-04-13 23:03:55,294 - INFO - ==================================================
+2026-04-13 23:16:12,350 - INFO - JIRA Client initialized
+2026-04-13 23:16:12,351 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 23:16:12,355 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 23:16:12,356 - INFO - Project: OCI
+2026-04-13 23:16:12,361 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 23:16:12,361 - INFO - ==================================================
+2026-04-13 23:16:12,366 - INFO - JIRA Client initialized
+2026-04-13 23:16:12,366 - INFO - Hourly scheduler started in background thread
+2026-04-13 23:16:12,367 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 23:16:12,369 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 23:16:12,369 - INFO - Project: OCI
+2026-04-13 23:16:12,431 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-13 23:16:12,432 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-13 23:16:12,439 - INFO -  * Restarting with stat
+2026-04-13 23:16:13,192 - INFO - JIRA Client initialized
+2026-04-13 23:16:13,192 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 23:16:13,197 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 23:16:13,197 - INFO - Project: OCI
+2026-04-13 23:16:13,202 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-13 23:16:13,202 - INFO - ==================================================
+2026-04-13 23:16:13,208 - INFO - JIRA Client initialized
+2026-04-13 23:16:13,208 - INFO - Hourly scheduler started in background thread
+2026-04-13 23:16:13,209 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-13 23:16:13,211 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-13 23:16:13,211 - INFO - Project: OCI
+2026-04-13 23:16:13,244 - WARNING -  * Debugger is active!
+2026-04-13 23:16:13,248 - INFO -  * Debugger PIN: 389-036-213
+2026-04-14 00:16:12,404 - INFO - ==================================================
+2026-04-14 00:16:12,405 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 00:16:12,408 - INFO - Current time: 2026-04-14 00:16:12
+2026-04-14 00:16:12,409 - INFO - No critical metrics to check
+2026-04-14 00:16:12,410 - INFO - ==================================================
+2026-04-14 00:16:13,251 - INFO - ==================================================
+2026-04-14 00:16:13,252 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 00:16:13,254 - INFO - Current time: 2026-04-14 00:16:13
+2026-04-14 00:16:13,255 - INFO - No critical metrics to check
+2026-04-14 00:16:13,256 - INFO - ==================================================
+2026-04-14 01:16:12,447 - INFO - ==================================================
+2026-04-14 01:16:12,447 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 01:16:12,451 - INFO - Current time: 2026-04-14 01:16:12
+2026-04-14 01:16:12,452 - INFO - No critical metrics to check
+2026-04-14 01:16:12,452 - INFO - ==================================================
+2026-04-14 01:16:13,290 - INFO - ==================================================
+2026-04-14 01:16:13,291 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 01:16:13,293 - INFO - Current time: 2026-04-14 01:16:13
+2026-04-14 01:16:13,293 - INFO - No critical metrics to check
+2026-04-14 01:16:13,294 - INFO - ==================================================
+2026-04-14 02:16:12,492 - INFO - ==================================================
+2026-04-14 02:16:12,493 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 02:16:12,497 - INFO - Current time: 2026-04-14 02:16:12
+2026-04-14 02:16:12,498 - INFO - No critical metrics to check
+2026-04-14 02:16:12,498 - INFO - ==================================================
+2026-04-14 02:16:13,330 - INFO - ==================================================
+2026-04-14 02:16:13,330 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 02:16:13,333 - INFO - Current time: 2026-04-14 02:16:13
+2026-04-14 02:16:13,334 - INFO - No critical metrics to check
+2026-04-14 02:16:13,335 - INFO - ==================================================
+2026-04-14 03:16:12,538 - INFO - ==================================================
+2026-04-14 03:16:12,539 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 03:16:12,542 - INFO - Current time: 2026-04-14 03:16:12
+2026-04-14 03:16:12,543 - INFO - No critical metrics to check
+2026-04-14 03:16:12,543 - INFO - ==================================================
+2026-04-14 03:16:13,372 - INFO - ==================================================
+2026-04-14 03:16:13,373 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 03:16:13,375 - INFO - Current time: 2026-04-14 03:16:13
+2026-04-14 03:16:13,375 - INFO - No critical metrics to check
+2026-04-14 03:16:13,376 - INFO - ==================================================
+2026-04-14 04:16:12,583 - INFO - ==================================================
+2026-04-14 04:16:12,585 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 04:16:12,589 - INFO - Current time: 2026-04-14 04:16:12
+2026-04-14 04:16:12,590 - INFO - No critical metrics to check
+2026-04-14 04:16:12,590 - INFO - ==================================================
+2026-04-14 04:16:13,537 - INFO - ==================================================
+2026-04-14 04:16:13,538 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 04:16:13,540 - INFO - Current time: 2026-04-14 04:16:13
+2026-04-14 04:16:13,541 - INFO - No critical metrics to check
+2026-04-14 04:16:13,541 - INFO - ==================================================
+2026-04-14 05:16:12,632 - INFO - ==================================================
+2026-04-14 05:16:12,633 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 05:16:12,639 - INFO - Current time: 2026-04-14 05:16:12
+2026-04-14 05:16:12,639 - INFO - No critical metrics to check
+2026-04-14 05:16:12,641 - INFO - ==================================================
+2026-04-14 05:16:13,577 - INFO - ==================================================
+2026-04-14 05:16:13,578 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 05:16:13,580 - INFO - Current time: 2026-04-14 05:16:13
+2026-04-14 05:16:13,580 - INFO - No critical metrics to check
+2026-04-14 05:16:13,581 - INFO - ==================================================
+2026-04-14 06:16:12,680 - INFO - ==================================================
+2026-04-14 06:16:12,681 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 06:16:12,684 - INFO - Current time: 2026-04-14 06:16:12
+2026-04-14 06:16:12,684 - INFO - No critical metrics to check
+2026-04-14 06:16:12,685 - INFO - ==================================================
+2026-04-14 06:16:13,614 - INFO - ==================================================
+2026-04-14 06:16:13,615 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 06:16:13,616 - INFO - Current time: 2026-04-14 06:16:13
+2026-04-14 06:16:13,617 - INFO - No critical metrics to check
+2026-04-14 06:16:13,618 - INFO - ==================================================
+2026-04-14 07:16:12,722 - INFO - ==================================================
+2026-04-14 07:16:12,723 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 07:16:12,727 - INFO - Current time: 2026-04-14 07:16:12
+2026-04-14 07:16:12,728 - INFO - No critical metrics to check
+2026-04-14 07:16:12,728 - INFO - ==================================================
+2026-04-14 07:16:13,657 - INFO - ==================================================
+2026-04-14 07:16:13,658 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 07:16:13,660 - INFO - Current time: 2026-04-14 07:16:13
+2026-04-14 07:16:13,661 - INFO - No critical metrics to check
+2026-04-14 07:16:13,662 - INFO - ==================================================
+2026-04-14 08:16:12,765 - INFO - ==================================================
+2026-04-14 08:16:12,766 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 08:16:12,770 - INFO - Current time: 2026-04-14 08:16:12
+2026-04-14 08:16:12,771 - INFO - No critical metrics to check
+2026-04-14 08:16:12,771 - INFO - ==================================================
+2026-04-14 08:16:13,703 - INFO - ==================================================
+2026-04-14 08:16:13,704 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 08:16:13,706 - INFO - Current time: 2026-04-14 08:16:13
+2026-04-14 08:16:13,707 - INFO - No critical metrics to check
+2026-04-14 08:16:13,707 - INFO - ==================================================
+2026-04-14 09:16:12,812 - INFO - ==================================================
+2026-04-14 09:16:12,812 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 09:16:12,816 - INFO - Current time: 2026-04-14 09:16:12
+2026-04-14 09:16:12,816 - INFO - No critical metrics to check
+2026-04-14 09:16:12,817 - INFO - ==================================================
+2026-04-14 09:16:13,747 - INFO - ==================================================
+2026-04-14 09:16:13,748 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 09:16:13,751 - INFO - Current time: 2026-04-14 09:16:13
+2026-04-14 09:16:13,751 - INFO - No critical metrics to check
+2026-04-14 09:16:13,752 - INFO - ==================================================
+2026-04-14 10:16:12,859 - INFO - ==================================================
+2026-04-14 10:16:12,860 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 10:16:12,864 - INFO - Current time: 2026-04-14 10:16:12
+2026-04-14 10:16:12,865 - INFO - No critical metrics to check
+2026-04-14 10:16:12,866 - INFO - ==================================================
+2026-04-14 10:16:13,788 - INFO - ==================================================
+2026-04-14 10:16:13,789 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 10:16:13,791 - INFO - Current time: 2026-04-14 10:16:13
+2026-04-14 10:16:13,792 - INFO - No critical metrics to check
+2026-04-14 10:16:13,792 - INFO - ==================================================
+2026-04-14 11:16:12,901 - INFO - ==================================================
+2026-04-14 11:16:12,902 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 11:16:12,907 - INFO - Current time: 2026-04-14 11:16:12
+2026-04-14 11:16:12,908 - INFO - No critical metrics to check
+2026-04-14 11:16:12,908 - INFO - ==================================================
+2026-04-14 11:16:13,831 - INFO - ==================================================
+2026-04-14 11:16:13,831 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 11:16:13,834 - INFO - Current time: 2026-04-14 11:16:13
+2026-04-14 11:16:13,835 - INFO - No critical metrics to check
+2026-04-14 11:16:13,835 - INFO - ==================================================
+2026-04-14 12:16:12,949 - INFO - ==================================================
+2026-04-14 12:16:12,950 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 12:16:12,954 - INFO - Current time: 2026-04-14 12:16:12
+2026-04-14 12:16:12,955 - INFO - No critical metrics to check
+2026-04-14 12:16:12,956 - INFO - ==================================================
+2026-04-14 12:16:13,872 - INFO - ==================================================
+2026-04-14 12:16:13,873 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 12:16:13,875 - INFO - Current time: 2026-04-14 12:16:13
+2026-04-14 12:16:13,876 - INFO - No critical metrics to check
+2026-04-14 12:16:13,876 - INFO - ==================================================
+2026-04-14 13:16:12,996 - INFO - ==================================================
+2026-04-14 13:16:12,997 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 13:16:13,002 - INFO - Current time: 2026-04-14 13:16:12
+2026-04-14 13:16:13,003 - INFO - No critical metrics to check
+2026-04-14 13:16:13,003 - INFO - ==================================================
+2026-04-14 13:16:13,912 - INFO - ==================================================
+2026-04-14 13:16:13,913 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 13:16:13,915 - INFO - Current time: 2026-04-14 13:16:13
+2026-04-14 13:16:13,916 - INFO - No critical metrics to check
+2026-04-14 13:16:13,916 - INFO - ==================================================
+2026-04-14 14:16:13,042 - INFO - ==================================================
+2026-04-14 14:16:13,043 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 14:16:13,046 - INFO - Current time: 2026-04-14 14:16:13
+2026-04-14 14:16:13,048 - INFO - No critical metrics to check
+2026-04-14 14:16:13,048 - INFO - ==================================================
+2026-04-14 14:16:13,956 - INFO - ==================================================
+2026-04-14 14:16:13,957 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 14:16:13,959 - INFO - Current time: 2026-04-14 14:16:13
+2026-04-14 14:16:13,960 - INFO - No critical metrics to check
+2026-04-14 14:16:13,960 - INFO - ==================================================
+2026-04-14 15:16:13,088 - INFO - ==================================================
+2026-04-14 15:16:13,089 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 15:16:13,093 - INFO - Current time: 2026-04-14 15:16:13
+2026-04-14 15:16:13,094 - INFO - No critical metrics to check
+2026-04-14 15:16:13,094 - INFO - ==================================================
+2026-04-14 15:16:13,995 - INFO - ==================================================
+2026-04-14 15:16:13,996 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 15:16:13,998 - INFO - Current time: 2026-04-14 15:16:13
+2026-04-14 15:16:13,999 - INFO - No critical metrics to check
+2026-04-14 15:16:14,000 - INFO - ==================================================
+2026-04-14 16:16:13,148 - INFO - ==================================================
+2026-04-14 16:16:13,148 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 16:16:13,153 - INFO - Current time: 2026-04-14 16:16:13
+2026-04-14 16:16:13,153 - INFO - No critical metrics to check
+2026-04-14 16:16:13,154 - INFO - ==================================================
+2026-04-14 16:16:14,037 - INFO - ==================================================
+2026-04-14 16:16:14,037 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 16:16:14,040 - INFO - Current time: 2026-04-14 16:16:14
+2026-04-14 16:16:14,040 - INFO - No critical metrics to check
+2026-04-14 16:16:14,041 - INFO - ==================================================
+2026-04-14 17:16:13,193 - INFO - ==================================================
+2026-04-14 17:16:13,194 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 17:16:13,198 - INFO - Current time: 2026-04-14 17:16:13
+2026-04-14 17:16:13,199 - INFO - No critical metrics to check
+2026-04-14 17:16:13,200 - INFO - ==================================================
+2026-04-14 17:16:14,080 - INFO - ==================================================
+2026-04-14 17:16:14,080 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 17:16:14,084 - INFO - Current time: 2026-04-14 17:16:14
+2026-04-14 17:16:14,085 - INFO - No critical metrics to check
+2026-04-14 17:16:14,086 - INFO - ==================================================
+2026-04-14 18:16:13,231 - INFO - ==================================================
+2026-04-14 18:16:13,232 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 18:16:13,235 - INFO - Current time: 2026-04-14 18:16:13
+2026-04-14 18:16:13,235 - INFO - No critical metrics to check
+2026-04-14 18:16:13,236 - INFO - ==================================================
+2026-04-14 18:16:14,115 - INFO - ==================================================
+2026-04-14 18:16:14,116 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 18:16:14,117 - INFO - Current time: 2026-04-14 18:16:14
+2026-04-14 18:16:14,117 - INFO - No critical metrics to check
+2026-04-14 18:16:14,117 - INFO - ==================================================
+2026-04-14 19:16:13,266 - INFO - ==================================================
+2026-04-14 19:16:13,267 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 19:16:13,270 - INFO - Current time: 2026-04-14 19:16:13
+2026-04-14 19:16:13,270 - INFO - No critical metrics to check
+2026-04-14 19:16:13,271 - INFO - ==================================================
+2026-04-14 19:16:14,161 - INFO - ==================================================
+2026-04-14 19:16:14,161 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 19:16:14,162 - INFO - Current time: 2026-04-14 19:16:14
+2026-04-14 19:16:14,162 - INFO - No critical metrics to check
+2026-04-14 19:16:14,163 - INFO - ==================================================
+2026-04-14 20:16:13,301 - INFO - ==================================================
+2026-04-14 20:16:13,302 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 20:16:13,304 - INFO - Current time: 2026-04-14 20:16:13
+2026-04-14 20:16:13,304 - INFO - No critical metrics to check
+2026-04-14 20:16:13,305 - INFO - ==================================================
+2026-04-14 20:16:14,192 - INFO - ==================================================
+2026-04-14 20:16:14,192 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 20:16:14,193 - INFO - Current time: 2026-04-14 20:16:14
+2026-04-14 20:16:14,193 - INFO - No critical metrics to check
+2026-04-14 20:16:14,194 - INFO - ==================================================
+2026-04-14 21:16:13,332 - INFO - ==================================================
+2026-04-14 21:16:13,333 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 21:16:13,334 - INFO - Current time: 2026-04-14 21:16:13
+2026-04-14 21:16:13,335 - INFO - No critical metrics to check
+2026-04-14 21:16:13,335 - INFO - ==================================================
+2026-04-14 21:16:14,222 - INFO - ==================================================
+2026-04-14 21:16:14,223 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 21:16:14,223 - INFO - Current time: 2026-04-14 21:16:14
+2026-04-14 21:16:14,224 - INFO - No critical metrics to check
+2026-04-14 21:16:14,224 - INFO - ==================================================
+2026-04-14 22:16:13,366 - INFO - ==================================================
+2026-04-14 22:16:13,367 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 22:16:13,369 - INFO - Current time: 2026-04-14 22:16:13
+2026-04-14 22:16:13,370 - INFO - No critical metrics to check
+2026-04-14 22:16:13,370 - INFO - ==================================================
+2026-04-14 22:16:14,253 - INFO - ==================================================
+2026-04-14 22:16:14,253 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 22:16:14,254 - INFO - Current time: 2026-04-14 22:16:14
+2026-04-14 22:16:14,254 - INFO - No critical metrics to check
+2026-04-14 22:16:14,255 - INFO - ==================================================
+2026-04-14 23:16:13,397 - INFO - ==================================================
+2026-04-14 23:16:13,398 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 23:16:13,399 - INFO - Current time: 2026-04-14 23:16:13
+2026-04-14 23:16:13,400 - INFO - No critical metrics to check
+2026-04-14 23:16:13,401 - INFO - ==================================================
+2026-04-14 23:16:14,281 - INFO - ==================================================
+2026-04-14 23:16:14,282 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-14 23:16:14,283 - INFO - Current time: 2026-04-14 23:16:14
+2026-04-14 23:16:14,283 - INFO - No critical metrics to check
+2026-04-14 23:16:14,283 - INFO - ==================================================
+2026-04-15 00:16:13,428 - INFO - ==================================================
+2026-04-15 00:16:13,429 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 00:16:13,430 - INFO - Current time: 2026-04-15 00:16:13
+2026-04-15 00:16:13,430 - INFO - No critical metrics to check
+2026-04-15 00:16:13,431 - INFO - ==================================================
+2026-04-15 00:16:14,311 - INFO - ==================================================
+2026-04-15 00:16:14,311 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 00:16:14,312 - INFO - Current time: 2026-04-15 00:16:14
+2026-04-15 00:16:14,312 - INFO - No critical metrics to check
+2026-04-15 00:16:14,313 - INFO - ==================================================
+2026-04-15 01:16:13,460 - INFO - ==================================================
+2026-04-15 01:16:13,461 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 01:16:13,462 - INFO - Current time: 2026-04-15 01:16:13
+2026-04-15 01:16:13,463 - INFO - No critical metrics to check
+2026-04-15 01:16:13,463 - INFO - ==================================================
+2026-04-15 01:16:14,342 - INFO - ==================================================
+2026-04-15 01:16:14,343 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 01:16:14,344 - INFO - Current time: 2026-04-15 01:16:14
+2026-04-15 01:16:14,344 - INFO - No critical metrics to check
+2026-04-15 01:16:14,345 - INFO - ==================================================
+2026-04-15 02:16:13,490 - INFO - ==================================================
+2026-04-15 02:16:13,491 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 02:16:13,492 - INFO - Current time: 2026-04-15 02:16:13
+2026-04-15 02:16:13,492 - INFO - No critical metrics to check
+2026-04-15 02:16:13,493 - INFO - ==================================================
+2026-04-15 02:16:14,372 - INFO - ==================================================
+2026-04-15 02:16:14,373 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 02:16:14,374 - INFO - Current time: 2026-04-15 02:16:14
+2026-04-15 02:16:14,374 - INFO - No critical metrics to check
+2026-04-15 02:16:14,375 - INFO - ==================================================
+2026-04-15 03:16:13,521 - INFO - ==================================================
+2026-04-15 03:16:13,522 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 03:16:13,523 - INFO - Current time: 2026-04-15 03:16:13
+2026-04-15 03:16:13,524 - INFO - No critical metrics to check
+2026-04-15 03:16:13,524 - INFO - ==================================================
+2026-04-15 03:16:14,400 - INFO - ==================================================
+2026-04-15 03:16:14,401 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 03:16:14,401 - INFO - Current time: 2026-04-15 03:16:14
+2026-04-15 03:16:14,401 - INFO - No critical metrics to check
+2026-04-15 03:16:14,402 - INFO - ==================================================
+2026-04-15 04:16:13,552 - INFO - ==================================================
+2026-04-15 04:16:13,552 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 04:16:13,553 - INFO - Current time: 2026-04-15 04:16:13
+2026-04-15 04:16:13,553 - INFO - No critical metrics to check
+2026-04-15 04:16:13,554 - INFO - ==================================================
+2026-04-15 04:16:14,428 - INFO - ==================================================
+2026-04-15 04:16:14,428 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 04:16:14,429 - INFO - Current time: 2026-04-15 04:16:14
+2026-04-15 04:16:14,429 - INFO - No critical metrics to check
+2026-04-15 04:16:14,430 - INFO - ==================================================
+2026-04-15 05:16:13,583 - INFO - ==================================================
+2026-04-15 05:16:13,584 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 05:16:13,585 - INFO - Current time: 2026-04-15 05:16:13
+2026-04-15 05:16:13,586 - INFO - No critical metrics to check
+2026-04-15 05:16:13,586 - INFO - ==================================================
+2026-04-15 05:16:14,458 - INFO - ==================================================
+2026-04-15 05:16:14,459 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 05:16:14,460 - INFO - Current time: 2026-04-15 05:16:14
+2026-04-15 05:16:14,460 - INFO - No critical metrics to check
+2026-04-15 05:16:14,461 - INFO - ==================================================
+2026-04-15 06:16:13,616 - INFO - ==================================================
+2026-04-15 06:16:13,617 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 06:16:13,618 - INFO - Current time: 2026-04-15 06:16:13
+2026-04-15 06:16:13,618 - INFO - No critical metrics to check
+2026-04-15 06:16:13,619 - INFO - ==================================================
+2026-04-15 06:16:14,487 - INFO - ==================================================
+2026-04-15 06:16:14,487 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 06:16:14,488 - INFO - Current time: 2026-04-15 06:16:14
+2026-04-15 06:16:14,488 - INFO - No critical metrics to check
+2026-04-15 06:16:14,489 - INFO - ==================================================
+2026-04-15 07:16:13,648 - INFO - ==================================================
+2026-04-15 07:16:13,649 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 07:16:13,650 - INFO - Current time: 2026-04-15 07:16:13
+2026-04-15 07:16:13,650 - INFO - No critical metrics to check
+2026-04-15 07:16:13,650 - INFO - ==================================================
+2026-04-15 07:16:14,514 - INFO - ==================================================
+2026-04-15 07:16:14,515 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 07:16:14,515 - INFO - Current time: 2026-04-15 07:16:14
+2026-04-15 07:16:14,516 - INFO - No critical metrics to check
+2026-04-15 07:16:14,516 - INFO - ==================================================
+2026-04-15 08:16:13,678 - INFO - ==================================================
+2026-04-15 08:16:13,679 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 08:16:13,680 - INFO - Current time: 2026-04-15 08:16:13
+2026-04-15 08:16:13,680 - INFO - No critical metrics to check
+2026-04-15 08:16:13,680 - INFO - ==================================================
+2026-04-15 08:16:14,542 - INFO - ==================================================
+2026-04-15 08:16:14,543 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 08:16:14,544 - INFO - Current time: 2026-04-15 08:16:14
+2026-04-15 08:16:14,544 - INFO - No critical metrics to check
+2026-04-15 08:16:14,545 - INFO - ==================================================
+2026-04-15 09:16:13,706 - INFO - ==================================================
+2026-04-15 09:16:13,708 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 09:16:13,709 - INFO - Current time: 2026-04-15 09:16:13
+2026-04-15 09:16:13,710 - INFO - No critical metrics to check
+2026-04-15 09:16:13,710 - INFO - ==================================================
+2026-04-15 09:16:14,572 - INFO - ==================================================
+2026-04-15 09:16:14,573 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 09:16:14,573 - INFO - Current time: 2026-04-15 09:16:14
+2026-04-15 09:16:14,574 - INFO - No critical metrics to check
+2026-04-15 09:16:14,574 - INFO - ==================================================
+2026-04-15 10:16:13,737 - INFO - ==================================================
+2026-04-15 10:16:13,738 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 10:16:13,739 - INFO - Current time: 2026-04-15 10:16:13
+2026-04-15 10:16:13,739 - INFO - No critical metrics to check
+2026-04-15 10:16:13,740 - INFO - ==================================================
+2026-04-15 10:16:14,602 - INFO - ==================================================
+2026-04-15 10:16:14,603 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 10:16:14,603 - INFO - Current time: 2026-04-15 10:16:14
+2026-04-15 10:16:14,604 - INFO - No critical metrics to check
+2026-04-15 10:16:14,604 - INFO - ==================================================
+2026-04-15 11:16:13,769 - INFO - ==================================================
+2026-04-15 11:16:13,770 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 11:16:13,771 - INFO - Current time: 2026-04-15 11:16:13
+2026-04-15 11:16:13,772 - INFO - No critical metrics to check
+2026-04-15 11:16:13,772 - INFO - ==================================================
+2026-04-15 11:16:14,633 - INFO - ==================================================
+2026-04-15 11:16:14,634 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 11:16:14,634 - INFO - Current time: 2026-04-15 11:16:14
+2026-04-15 11:16:14,634 - INFO - No critical metrics to check
+2026-04-15 11:16:14,635 - INFO - ==================================================
+2026-04-15 12:16:13,801 - INFO - ==================================================
+2026-04-15 12:16:13,802 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 12:16:13,803 - INFO - Current time: 2026-04-15 12:16:13
+2026-04-15 12:16:13,803 - INFO - No critical metrics to check
+2026-04-15 12:16:13,804 - INFO - ==================================================
+2026-04-15 12:16:14,662 - INFO - ==================================================
+2026-04-15 12:16:14,662 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 12:16:14,663 - INFO - Current time: 2026-04-15 12:16:14
+2026-04-15 12:16:14,664 - INFO - No critical metrics to check
+2026-04-15 12:16:14,664 - INFO - ==================================================
+2026-04-15 13:16:13,843 - INFO - ==================================================
+2026-04-15 13:16:13,844 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 13:16:13,845 - INFO - Current time: 2026-04-15 13:16:13
+2026-04-15 13:16:13,845 - INFO - No critical metrics to check
+2026-04-15 13:16:13,846 - INFO - ==================================================
+2026-04-15 13:16:14,690 - INFO - ==================================================
+2026-04-15 13:16:14,691 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 13:16:14,692 - INFO - Current time: 2026-04-15 13:16:14
+2026-04-15 13:16:14,692 - INFO - No critical metrics to check
+2026-04-15 13:16:14,692 - INFO - ==================================================
+2026-04-15 14:16:13,874 - INFO - ==================================================
+2026-04-15 14:16:13,875 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 14:16:13,875 - INFO - Current time: 2026-04-15 14:16:13
+2026-04-15 14:16:13,876 - INFO - No critical metrics to check
+2026-04-15 14:16:13,877 - INFO - ==================================================
+2026-04-15 14:16:14,718 - INFO - ==================================================
+2026-04-15 14:16:14,718 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 14:16:14,719 - INFO - Current time: 2026-04-15 14:16:14
+2026-04-15 14:16:14,719 - INFO - No critical metrics to check
+2026-04-15 14:16:14,720 - INFO - ==================================================
+2026-04-15 15:16:13,905 - INFO - ==================================================
+2026-04-15 15:16:13,906 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 15:16:13,906 - INFO - Current time: 2026-04-15 15:16:13
+2026-04-15 15:16:13,907 - INFO - No critical metrics to check
+2026-04-15 15:16:13,907 - INFO - ==================================================
+2026-04-15 15:16:14,748 - INFO - ==================================================
+2026-04-15 15:16:14,749 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 15:16:14,749 - INFO - Current time: 2026-04-15 15:16:14
+2026-04-15 15:16:14,750 - INFO - No critical metrics to check
+2026-04-15 15:16:14,750 - INFO - ==================================================
+2026-04-15 16:16:13,935 - INFO - ==================================================
+2026-04-15 16:16:13,936 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 16:16:13,937 - INFO - Current time: 2026-04-15 16:16:13
+2026-04-15 16:16:13,937 - INFO - No critical metrics to check
+2026-04-15 16:16:13,938 - INFO - ==================================================
+2026-04-15 16:16:14,779 - INFO - ==================================================
+2026-04-15 16:16:14,780 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 16:16:14,781 - INFO - Current time: 2026-04-15 16:16:14
+2026-04-15 16:16:14,781 - INFO - No critical metrics to check
+2026-04-15 16:16:14,781 - INFO - ==================================================
+2026-04-15 17:16:13,966 - INFO - ==================================================
+2026-04-15 17:16:13,967 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 17:16:13,968 - INFO - Current time: 2026-04-15 17:16:13
+2026-04-15 17:16:13,968 - INFO - No critical metrics to check
+2026-04-15 17:16:13,968 - INFO - ==================================================
+2026-04-15 17:16:14,809 - INFO - ==================================================
+2026-04-15 17:16:14,810 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 17:16:14,811 - INFO - Current time: 2026-04-15 17:16:14
+2026-04-15 17:16:14,811 - INFO - No critical metrics to check
+2026-04-15 17:16:14,811 - INFO - ==================================================
+2026-04-15 18:16:14,001 - INFO - ==================================================
+2026-04-15 18:16:14,002 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 18:16:14,004 - INFO - Current time: 2026-04-15 18:16:14
+2026-04-15 18:16:14,005 - INFO - No critical metrics to check
+2026-04-15 18:16:14,005 - INFO - ==================================================
+2026-04-15 18:16:14,873 - INFO - ==================================================
+2026-04-15 18:16:14,874 - INFO - HOURLY CHECK: Checking for persistent critical metrics...
+2026-04-15 18:16:14,875 - INFO - Current time: 2026-04-15 18:16:14
+2026-04-15 18:16:14,876 - INFO - No critical metrics to check
+2026-04-15 18:16:14,877 - INFO - ==================================================

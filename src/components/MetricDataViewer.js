@@ -17,6 +17,8 @@ const MetricDataViewer = ({ metric, source }) => {
   // Load saved thresholds and alert status from local storage when metric changes
   useEffect(() => {
     if (metric) {
+      console.log("VIEWER SOURCE:", source);
+      console.log("VIEWER METRIC:", metric);
       loadSavedThresholds(metric.name);
       loadSavedAlertStatus(metric.name);
       fetchMetricData();
@@ -82,8 +84,16 @@ const MetricDataViewer = ({ metric, source }) => {
     try {
       setLoading(true);
       setError(null);
-      
-      const q = encodeURIComponent(metric.name);
+
+      const metricName = typeof metric === 'object' ? metric?.name : metric;
+      if (!metricName) {
+        setError('Invalid metric selection');
+        return;
+      }
+
+      console.log("FINAL QUERY:", `/api/v1/query?query=${metricName}&source=${source}`);
+
+      const q = encodeURIComponent(metricName);
       let currentUrl = `/api/v1/query?query=${q}`;
       const yesterdayTimestamp = Math.floor(Date.now() / 1000) - 86400;
       let yesterdayUrl = `/api/v1/query?query=${q}&time=${yesterdayTimestamp}`;
@@ -395,7 +405,8 @@ const MetricDataViewer = ({ metric, source }) => {
                     change_percentage: Math.abs(change),
                     labels: data.labels,
                     warning_threshold: warningThreshold,
-                    critical_threshold: criticalThreshold
+                    critical_threshold: criticalThreshold,
+                    source: source 
                   };
                   
                   // Send alert asynchronously
