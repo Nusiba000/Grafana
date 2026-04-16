@@ -18,7 +18,7 @@
     "react-scripts": "5.0.1",
     "recharts": "^2.8.0"
   },
-  "proxy": "https://prometheus.odp-main.duckdns.org",
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",

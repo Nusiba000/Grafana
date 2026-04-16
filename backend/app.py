@@ -356,63 +356,65 @@ def health_check():
         "timestamp": datetime.now().isoformat()
     })
 
+def resolve_source(source_param):
+    """
+    Return (base_url, error_response) for a given source query param.
+    If source is omitted the request is rejected — every call must be explicit
+    so that metrics from one data source never silently bleed into another.
+    """
+    if not source_param:
+        return None, (jsonify({"error": "Missing required query parameter: source"}), 400)
+    base_url = DATA_SOURCES.get(source_param)
+    if not base_url:
+        return None, (jsonify({"error": f"Unknown data source: {source_param}"}), 400)
+    return base_url, None
+
+
 @app.route('/api/v1/query', methods=['GET'])
 def prometheus_query():
     try:
         query = request.args.get('query')
-        source = request.args.get('source', 'vcenter-prom')
-        time_param = request.args.get('time')  
+        if not query:
+            return jsonify({"error": "Missing required query parameter: query"}), 400
 
-        base_url = DATA_SOURCES.get(source)
+        base_url, err = resolve_source(request.args.get('source'))
+        if err:
+            return err
 
-        if not base_url:
-            return jsonify({"error": f"Invalid data source: {source}"}), 400
-
-        # Build params dynamically
         params = {"query": query}
+        time_param = request.args.get('time')
         if time_param:
             params["time"] = time_param
 
-        response = requests.get(
-            f"{base_url}/api/v1/query",
-            params=params,
-            timeout=10 
-        )
-
+        response = requests.get(f"{base_url}/api/v1/query", params=params, timeout=10)
         return jsonify(response.json())
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
+
 @app.route('/api/v1/label/<label_name>/values', methods=['GET'])
 def prometheus_label_values(label_name):
     try:
-        source = request.args.get('source', 'vcenter-prom')
-        base_url = DATA_SOURCES.get(source)
+        base_url, err = resolve_source(request.args.get('source'))
+        if err:
+            return err
 
-        if not base_url:
-            return jsonify({"error": f"Invalid data source: {source}"}), 400
-
-        response = requests.get(
-            f"{base_url}/api/v1/label/{label_name}/values"
-        )
-
+        response = requests.get(f"{base_url}/api/v1/label/{label_name}/values", timeout=10)
         return jsonify(response.json())
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
+
 @app.route('/api/v1/metadata', methods=['GET'])
 def prometheus_metadata():
     try:
-        source = request.args.get('source', 'vcenter-prom')
-        base_url = DATA_SOURCES.get(source)
+        base_url, err = resolve_source(request.args.get('source'))
+        if err:
+            return err
 
-        if not base_url:
-            return jsonify({"error": f"Invalid data source: {source}"}), 400
-
-        response = requests.get(f"{base_url}/api/v1/metadata")
-
+        response = requests.get(f"{base_url}/api/v1/metadata", timeout=10)
         return jsonify(response.json())
 
     except Exception as e:
