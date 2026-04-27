@@ -7,7 +7,6 @@ import logging
 import threading
 import time
 
-
 DATA_SOURCES = {
     "proxmox-prom": "https://prometheus.odp-main.duckdns.org",
     "vcenter-prom": "http://10.8.123.102:9090",
@@ -35,7 +34,7 @@ last_hourly_check = datetime.now()
 # JIRA Configuration
 JIRA_URL = os.getenv('JIRA_URL', 'https://omandatapark-sandbox-811.atlassian.net')
 JIRA_USERNAME = os.getenv('JIRA_USERNAME', 'halhaddabi@omandatapark.com')
-JIRA_API_TOKEN = os.getenv('JIRA_API_TOKEN', 'ATATT3xFfGF02Y1ODUJZBPhiomIm1FvVFwSdun5K3-DGJmwwZNykTYwxXKd6NkWcUJTUPBi4ZhKMw3_pAfpmlCre2b3kjlQhoRB6AeqktlbOvc-lurff2Jbh9D4cqzbb50bX42_UC4YGZNR073s3bgGZwDboEBLHxe0QALIA-vEgfbYL86W_9r8=876C8C00')
+JIRA_API_TOKEN = os.getenv('JIRA_API_TOKEN')
 JIRA_PROJECT_KEY = os.getenv('JIRA_PROJECT_KEY', 'OCI')
 
 class JiraClient:
@@ -240,16 +239,6 @@ class JiraClient:
                     "content": [{"type": "text", "text": "MONITORING INFO"}]
                 },
                 {
-                    "type": "listItem",
-                    "content": [{
-                        "type": "paragraph",
-                        "content": [{
-                            "type": "text",
-                            "text": f"Data Source: {alert_data.get('source', 'unknown')}"
-                        }]
-                    }]
-                },
-                {
                     "type": "bulletList",
                     "content": [
                         {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"Data Source: {alert_data.get('source', 'unknown')}"}]}]},
@@ -396,9 +385,23 @@ def prometheus_query():
 @app.route('/api/v1/label/<label_name>/values', methods=['GET'])
 def prometheus_label_values(label_name):
     try:
+
         base_url, err = resolve_source(request.args.get('source'))
         if err:
             return err
+
+        source = request.args.get('source', 'vcenter-prom')
+        base_url = DATA_SOURCES.get(source)
+
+        print("SOURCE:", source)
+        print("BASE URL:", base_url)
+
+        if not base_url:
+            return jsonify({"error": f"Invalid data source: {source}"}), 400
+
+        response = requests.get(
+            f"{base_url}/api/v1/label/{label_name}/values"
+        )
 
         response = requests.get(f"{base_url}/api/v1/label/{label_name}/values", timeout=10)
         return jsonify(response.json())
@@ -492,9 +495,6 @@ def create_alert():
         
         logger.info("Creating JIRA ticket...")
         
-        # Update critical metrics store with timestamp
-        update_critical_metrics_store(alert_data, 'critical')
-        
         # Create JIRA ticket
         result = jira_client.create_ticket(alert_data)
         
@@ -504,7 +504,8 @@ def create_alert():
             logger.info(f"Ticket URL: {result['ticket_url']}")
             logger.info("=" * 50)
             
-            # Update the last ticket time for this metric
+            # Only update the store after a ticket is successfully created
+            update_critical_metrics_store(alert_data, 'critical')
             if metric_key in critical_metrics_store:
                 critical_metrics_store[metric_key]['last_ticket_time'] = current_time.isoformat()
             

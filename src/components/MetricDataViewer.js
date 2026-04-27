@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Clock, Database, TrendingUp, Gauge, BarChart3, Hash, RefreshCw, Info, TrendingDown, Minus, AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 import './MetricDataViewer.css';
 
@@ -11,6 +11,7 @@ const MetricDataViewer = ({ metric, source }) => {
   const [warningThreshold, setWarningThreshold] = useState(15);
   const [criticalThreshold, setCriticalThreshold] = useState(25);
   const [alertSent, setAlertSent] = useState({});
+  const sentAlertsRef = useRef({});
 
   const storageScope = (name) => (source ? `${source}_${name}` : name);
 
@@ -24,6 +25,39 @@ const MetricDataViewer = ({ metric, source }) => {
       fetchMetricData();
     }
   }, [metric, source]);
+
+  // Trigger JIRA alerts for critical metrics after data is fully loaded
+  useEffect(() => {
+    if (!metricData || !yesterdayData) return;
+
+    metricData.forEach((data) => {
+      const yesterdayItem = yesterdayData.find(
+        (y) => JSON.stringify(y.labels) === JSON.stringify(data.labels)
+      );
+
+      const change = calculateChange(data.value, yesterdayItem?.value);
+      const status = getStatus(change);
+
+      const metricKey = `${data.name}_${JSON.stringify(data.labels)}`;
+
+      if (status === 'critical' && !sentAlertsRef.current[metricKey]) {
+        sentAlertsRef.current[metricKey] = true;
+
+        const alertData = {
+          metric_name: data.name,
+          current_value: data.value,
+          yesterday_value: yesterdayItem?.value || 0,
+          change_percentage: Math.abs(change),
+          labels: data.labels,
+          warning_threshold: warningThreshold,
+          critical_threshold: criticalThreshold,
+          source: source
+        };
+
+        sendJiraAlert(alertData, metricKey);
+      }
+    });
+  }, [metricData, yesterdayData]);
 
   // Load saved thresholds for a specific metric
   const loadSavedThresholds = (metricName) => {
@@ -394,25 +428,7 @@ const MetricDataViewer = ({ metric, source }) => {
                 );
                 const change = calculateChange(data.value, yesterdayItem?.value);
                 const status = getStatus(change);
-                
-                // Send JIRA alert for critical status (only once per metric+labels combination)
-                const metricKey = `${data.name}_${JSON.stringify(data.labels)}`;
-                if (status === 'critical' && !alertSent[metricKey]) {
-                  const alertData = {
-                    metric_name: data.name,
-                    current_value: data.value,
-                    yesterday_value: yesterdayItem?.value || 0,
-                    change_percentage: Math.abs(change),
-                    labels: data.labels,
-                    warning_threshold: warningThreshold,
-                    critical_threshold: criticalThreshold,
-                    source: source 
-                  };
-                  
-                  // Send alert asynchronously
-                  sendJiraAlert(alertData, metricKey);
-                }
-                
+
                 return (
                   <div key={index} className="table-row">
                     <div className="table-cell labels-cell">
