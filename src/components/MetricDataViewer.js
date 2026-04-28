@@ -11,7 +11,6 @@ const MetricDataViewer = ({ metric, source }) => {
   const [warningThreshold, setWarningThreshold] = useState(15);
   const [criticalThreshold, setCriticalThreshold] = useState(25);
   const [alertSent, setAlertSent] = useState({});
-  const sentAlertsRef = useRef({});
 
   const storageScope = (name) => (source ? `${source}_${name}` : name);
 
@@ -26,38 +25,63 @@ const MetricDataViewer = ({ metric, source }) => {
     }
   }, [metric, source]);
 
-  // Trigger JIRA alerts for critical metrics after data is fully loaded
+  const sentAlertsRef = useRef({});
+  const timeoutRef = useRef(null);
+
+  // Reset alerts when metric/source changes
   useEffect(() => {
-    if (!metricData || !yesterdayData) return;
+    sentAlertsRef.current = {};
+  }, [metric, source]);
 
-    metricData.forEach((data) => {
-      const yesterdayItem = yesterdayData.find(
-        (y) => JSON.stringify(y.labels) === JSON.stringify(data.labels)
-      );
+  // Trigger JIRA alerts for critical metrics AFTER data settles
+  useEffect(() => {
+    if (!metricData || !yesterdayData || loading) return;
 
-      const change = calculateChange(data.value, yesterdayItem?.value);
-      const status = getStatus(change);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
 
-      const metricKey = `${data.name}_${JSON.stringify(data.labels)}`;
+    timeoutRef.current = setTimeout(() => {
 
-      if (status === 'critical' && !sentAlertsRef.current[metricKey]) {
-        sentAlertsRef.current[metricKey] = true;
+      metricData.forEach((data) => {
+        const yesterdayItem = yesterdayData.find(
+          (y) => JSON.stringify(y.labels) === JSON.stringify(data.labels)
+        );
 
-        const alertData = {
-          metric_name: data.name,
-          current_value: data.value,
-          yesterday_value: yesterdayItem?.value || 0,
-          change_percentage: Math.abs(change),
-          labels: data.labels,
-          warning_threshold: warningThreshold,
-          critical_threshold: criticalThreshold,
-          source: source
-        };
+        if (!yesterdayItem || yesterdayItem.value === 0) {
+          return; // ignore this now (temporary)
+        }
 
-        sendJiraAlert(alertData, metricKey);
-      }
-    });
-  }, [metricData, yesterdayData]);
+        const change = calculateChange(data.value, yesterdayItem.value);
+        const status = getStatus(change);
+
+        const metricKey = `${data.name}_${JSON.stringify(data.labels)}`;
+
+        if (
+          status === 'critical' &&
+          !sentAlertsRef.current[metricKey] &&
+          change !== null
+        ) {
+          sentAlertsRef.current[metricKey] = true;
+
+          const alertData = {
+            metric_name: data.name,
+            current_value: data.value,
+            yesterday_value: yesterdayItem?.value || 0,
+            change_percentage: Math.abs(change),
+            labels: data.labels,
+            warning_threshold: warningThreshold,
+            critical_threshold: criticalThreshold,
+            source: source
+          };
+
+          sendJiraAlert(alertData, metricKey);
+        }
+      });
+
+    }, 300);
+
+  }, [metricData, yesterdayData, warningThreshold, criticalThreshold, source]);
 
   // Load saved thresholds for a specific metric
   const loadSavedThresholds = (metricName) => {

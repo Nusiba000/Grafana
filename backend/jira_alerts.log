@@ -1,0 +1,118 @@
+2026-04-27 20:04:45,277 - INFO - JIRA Client initialized
+2026-04-27 20:04:45,278 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-27 20:04:45,282 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-27 20:04:45,283 - INFO - Project: OCI
+2026-04-27 20:04:45,288 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-27 20:04:45,288 - INFO - ==================================================
+2026-04-27 20:04:45,293 - INFO - JIRA Client initialized
+2026-04-27 20:04:45,293 - INFO - Hourly scheduler started in background thread
+2026-04-27 20:04:45,294 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-27 20:04:45,297 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-27 20:04:45,297 - INFO - Project: OCI
+2026-04-27 20:04:45,391 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-27 20:04:45,392 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 20:04:45,400 - INFO -  * Restarting with stat
+2026-04-27 20:04:46,213 - INFO - JIRA Client initialized
+2026-04-27 20:04:46,214 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-27 20:04:46,217 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-27 20:04:46,218 - INFO - Project: OCI
+2026-04-27 20:04:46,222 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-27 20:04:46,223 - INFO - ==================================================
+2026-04-27 20:04:46,225 - INFO - JIRA Client initialized
+2026-04-27 20:04:46,225 - INFO - Hourly scheduler started in background thread
+2026-04-27 20:04:46,225 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-27 20:04:46,227 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-27 20:04:46,228 - INFO - Project: OCI
+2026-04-27 20:04:46,270 - WARNING -  * Debugger is active!
+2026-04-27 20:04:46,275 - INFO -  * Debugger PIN: 389-036-213
+2026-04-27 20:12:57,140 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:57] "GET /api/v1/metadata?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:12:57,232 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:57] "GET /api/v1/metadata?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:12:57,975 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:57] "GET /api/v1/label/__name__/values?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:12:57,983 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:57] "GET /api/v1/label/__name__/values?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:12:59,171 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:59] "GET /api/v1/query?query=pve_cluster_info&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:12:59,185 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:59] "GET /api/v1/label/__name__/values?source=vcenter-prom HTTP/1.1" 200 -
+2026-04-27 20:12:59,475 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:59] "GET /api/v1/metadata?source=vcenter-prom HTTP/1.1" 200 -
+2026-04-27 20:12:59,885 - INFO - 127.0.0.1 - - [27/Apr/2026 20:12:59] "GET /api/v1/query?query=vcenter_cluster_vm_count&source=vcenter-prom HTTP/1.1" 200 -
+2026-04-27 20:13:00,204 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:00] "GET /api/v1/query?query=vcenter_cluster_vm_count&source=vcenter-prom HTTP/1.1" 200 -
+2026-04-27 20:13:00,208 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:00] "GET /api/v1/query?query=vcenter_cluster_vm_count&time=1777219979&source=vcenter-prom HTTP/1.1" 200 -
+2026-04-27 20:13:00,342 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:00] "GET /api/v1/query?query=pve_cluster_info&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:13:00,352 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:00] "GET /api/v1/query?query=pve_cluster_info&time=1777219978&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:13:00,530 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:00] "GET /api/v1/query?query=vcenter_cluster_vm_count&time=1777219979&source=vcenter-prom HTTP/1.1" 200 -
+2026-04-27 20:13:01,364 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:01] "GET /api/v1/query?query=pve_cluster_info&time=1777219978&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-27 20:13:02,247 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:02] "GET /api/v1/metadata?source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-27 20:13:02,908 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:02] "GET /api/v1/label/__name__/values?source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-27 20:13:04,498 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:04] "GET /api/v1/query?query=apiserver_kube_aggregator_x509_insecure_sha1_total&source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-27 20:13:05,489 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:05] "GET /api/v1/query?query=apiserver_kube_aggregator_x509_insecure_sha1_total&source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-27 20:13:05,671 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:05] "GET /api/v1/query?query=apiserver_kube_aggregator_x509_insecure_sha1_total&time=1777219983&source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-27 20:13:06,660 - INFO - 127.0.0.1 - - [27/Apr/2026 20:13:06] "GET /api/v1/query?query=apiserver_kube_aggregator_x509_insecure_sha1_total&time=1777219983&source=nebulanew-prom HTTP/1.1" 200 -
+2026-04-28 17:25:11,743 - INFO - JIRA Client initialized
+2026-04-28 17:25:11,744 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:25:11,744 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:25:11,745 - INFO - Project: OCI
+2026-04-28 17:25:11,749 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-28 17:25:11,749 - INFO - ==================================================
+2026-04-28 17:25:11,750 - INFO - JIRA Client initialized
+2026-04-28 17:25:11,750 - INFO - Hourly scheduler started in background thread
+2026-04-28 17:25:11,751 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:25:11,751 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:25:11,751 - INFO - Project: OCI
+2026-04-28 17:25:11,836 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-28 17:25:11,837 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-28 17:25:11,843 - INFO -  * Restarting with stat
+2026-04-28 17:25:12,590 - INFO - JIRA Client initialized
+2026-04-28 17:25:12,590 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:25:12,591 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:25:12,592 - INFO - Project: OCI
+2026-04-28 17:25:12,597 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-28 17:25:12,597 - INFO - ==================================================
+2026-04-28 17:25:12,599 - INFO - JIRA Client initialized
+2026-04-28 17:25:12,599 - INFO - Hourly scheduler started in background thread
+2026-04-28 17:25:12,600 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:25:12,601 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:25:12,602 - INFO - Project: OCI
+2026-04-28 17:25:12,633 - WARNING -  * Debugger is active!
+2026-04-28 17:25:12,639 - INFO -  * Debugger PIN: 389-036-213
+2026-04-28 17:26:16,362 - INFO - JIRA Client initialized
+2026-04-28 17:26:16,362 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:26:16,365 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:26:16,366 - INFO - Project: OCI
+2026-04-28 17:26:16,372 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-28 17:26:16,373 - INFO - ==================================================
+2026-04-28 17:26:16,375 - INFO - JIRA Client initialized
+2026-04-28 17:26:16,375 - INFO - Hourly scheduler started in background thread
+2026-04-28 17:26:16,376 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:26:16,377 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:26:16,378 - INFO - Project: OCI
+2026-04-28 17:26:16,439 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.123.110:5000
+2026-04-28 17:26:16,439 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-28 17:26:16,446 - INFO -  * Restarting with stat
+2026-04-28 17:26:17,199 - INFO - JIRA Client initialized
+2026-04-28 17:26:17,200 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:26:17,203 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:26:17,204 - INFO - Project: OCI
+2026-04-28 17:26:17,215 - INFO - Starting OpSight JIRA Alert Service...
+2026-04-28 17:26:17,215 - INFO - ==================================================
+2026-04-28 17:26:17,218 - INFO - JIRA Client initialized
+2026-04-28 17:26:17,218 - INFO - Hourly scheduler started in background thread
+2026-04-28 17:26:17,219 - INFO - JIRA URL: https://omandatapark-sandbox-811.atlassian.net
+2026-04-28 17:26:17,221 - INFO - Username: halhaddabi@omandatapark.com
+2026-04-28 17:26:17,222 - INFO - Project: OCI
+2026-04-28 17:26:17,259 - WARNING -  * Debugger is active!
+2026-04-28 17:26:17,263 - INFO -  * Debugger PIN: 389-036-213
+2026-04-28 17:26:45,550 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:45] "GET /api/v1/metadata?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:45,619 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:45] "GET /api/v1/metadata?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:46,373 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:46] "GET /api/v1/label/__name__/values?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:46,474 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:46] "GET /api/v1/label/__name__/values?source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:47,453 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:47] "GET /api/v1/query?query=pve_cluster_info&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:48,981 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:48] "GET /api/v1/query?query=pve_cluster_info&time=1777296406&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:49,160 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:49] "GET /api/v1/query?query=pve_cluster_info&source=proxmox-prom HTTP/1.1" 200 -
+2026-04-28 17:26:49,897 - INFO - 127.0.0.1 - - [28/Apr/2026 17:26:49] "GET /api/v1/query?query=pve_cluster_info&time=1777296406&source=proxmox-prom HTTP/1.1" 200 -
