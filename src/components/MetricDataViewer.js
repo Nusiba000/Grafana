@@ -13,6 +13,7 @@ const MetricDataViewer = ({ metric, source, category }) => {
   const [criticalThreshold, setCriticalThreshold] = useState(25);
   const [alertSent, setAlertSent] = useState({});
   const [selectedCategory, setSelectedCategory] = useState("Host Metrics");
+  const [thresholdsLoaded, setThresholdsLoaded] = useState(false);
 
   const storageScope = (name) => (source ? `${source}_${name}` : name);
 
@@ -21,6 +22,7 @@ const MetricDataViewer = ({ metric, source, category }) => {
     if (metric) {
       console.log("VIEWER SOURCE:", source);
       console.log("VIEWER METRIC:", metric);
+      setThresholdsLoaded(false);
       loadSavedThresholds(metric.name);
       loadSavedAlertStatus(metric.name);
       fetchMetricData();
@@ -37,6 +39,7 @@ const MetricDataViewer = ({ metric, source, category }) => {
 
   // Trigger JIRA alerts for critical metrics AFTER data settles
   useEffect(() => {
+    if (!thresholdsLoaded) return;
     if (!metricData || !yesterdayData || loading) return;
 
     if (timeoutRef.current) {
@@ -60,7 +63,7 @@ const MetricDataViewer = ({ metric, source, category }) => {
         const metricKey = `${data.name}_${JSON.stringify(data.labels)}`;
 
         if (
-          status === 'critical' &&
+          (status === 'critical' || status === 'warning') &&
           !sentAlertsRef.current[metricKey] &&
           change !== null &&
           change !== 0
@@ -77,6 +80,7 @@ const MetricDataViewer = ({ metric, source, category }) => {
             labels: data.labels,
             warning_threshold: warningThreshold,
             critical_threshold: criticalThreshold,
+            status: status,
             source: source,
             category: category === "All Categories" 
               ? "Host Metrics" 
@@ -101,6 +105,7 @@ const MetricDataViewer = ({ metric, source, category }) => {
         setWarningThreshold(warning);
         setCriticalThreshold(critical);
       }
+      setThresholdsLoaded(true);
     } catch (error) {
       console.error('Error loading saved thresholds:', error);
     }

@@ -307,6 +307,9 @@ class JiraClient:
             source = group_info.get("source", "Unknown")
             metrics = group_info.get("metrics", [])
 
+            metrics = sorted(metrics, key=lambda x: x.get("change_percentage", 0), reverse=True)
+            metrics = metrics[:10]
+
             summary = f"AUTOMATIC CRITICAL ALERT - {category} ({source})"
 
             table_rows = []
@@ -325,11 +328,17 @@ class JiraClient:
 
             for m in metrics:
                 trend = "UP" if m["change_percentage"] > 0 else "DOWN"
-                status = "CRITICAL" if m["change_percentage"] >= m.get("critical_threshold", 25) else "NORMAL"
+                status = m.get("status", "UNKNOWN").upper()
+                labels = m.get("labels", {})
+                instance = labels.get("instance") or labels.get("node") or ""
+                if instance:
+                    metric_display = f"{m['metric_name']} ({instance})"
+                else:
+                    metric_display = m["metric_name"]
                 table_rows.append({
                     "type": "tableRow",
                     "content": [
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": m["metric_name"]}]}]},
+                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": metric_display}]}]},
                         {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": str(m["current_value"])}]}]},
                         {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": str(m["yesterday_value"])}]}]},
                         {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"{m['change_percentage']:.2f}%"}]}]},
