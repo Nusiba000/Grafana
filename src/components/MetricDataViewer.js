@@ -63,7 +63,6 @@ const MetricDataViewer = ({ metric, source, category }) => {
         const metricKey = `${data.name}_${JSON.stringify(data.labels)}`;
 
         if (
-          (status === 'critical' || status === 'warning') &&
           !sentAlertsRef.current[metricKey] &&
           change !== null &&
           change !== 0

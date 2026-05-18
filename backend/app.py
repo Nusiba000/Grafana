@@ -43,6 +43,7 @@ CORS(app)  # Enable CORS for React frontend
 critical_metrics_store = {}
 last_hourly_check = datetime.now()
 last_ticket_per_group = {}
+baseline_store = {}
 
 # JIRA Configuration
 JIRA_URL = os.getenv('JIRA_URL', 'https://omandatapark-sandbox-811.atlassian.net')
@@ -310,61 +311,294 @@ class JiraClient:
             metrics = sorted(metrics, key=lambda x: x.get("change_percentage", 0), reverse=True)
             metrics = metrics[:10]
 
+            critical_count = sum(1 for m in metrics if m.get("status") == "critical")
+            warning_count  = sum(1 for m in metrics if m.get("status") == "warning")
+            normal_count   = sum(1 for m in metrics if m.get("status") == "normal")
+
             summary = f"AUTOMATIC CRITICAL ALERT - {category} ({source})"
 
-            table_rows = []
+            # ── Summary counts ──────────────────────────────────────────────
+            total = len(metrics)
 
-            table_rows.append({
-                "type": "tableRow",
-                "content": [
-                    {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Metric"}]}]},
-                    {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Current"}]}]},
-                    {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Yesterday"}]}]},
-                    {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Change"}]}]},
-                    {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Trend"}]}]},
-                    {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Status"}]}]}
-                ]
-            })
+            # Exclude NORMAL metrics from the table (counts above are preserved)
+            metrics = [m for m in metrics if m.get("status") in ("critical", "warning")]
 
-            for m in metrics:
-                trend = "UP" if m["change_percentage"] > 0 else "DOWN"
-                status = m.get("status", "UNKNOWN").upper()
-                labels = m.get("labels", {})
-                instance = labels.get("instance") or labels.get("node") or ""
-                if instance:
-                    metric_display = f"{m['metric_name']} ({instance})"
-                else:
-                    metric_display = m["metric_name"]
-                table_rows.append({
+            # ── Insight: average baseline deviation ─────────────────────────
+            baseline_changes = [
+                abs(m.get("baseline_change", 0))
+                for m in metrics
+                if m.get("baseline_change") is not None
+            ]
+            avg_deviation = sum(baseline_changes) / len(baseline_changes) if baseline_changes else 0
+
+            # ── Split into CPU vs other ─────────────────────────────────────
+            cpu_metrics   = [m for m in metrics if "cpu" in m["metric_name"].lower()]
+            other_metrics = [m for m in metrics if "cpu" not in m["metric_name"].lower()]
+
+            # ── Helpers ─────────────────────────────────────────────────────
+            def format_number(value):
+                try:
+                    v = float(value)
+                    if v >= 1_000_000:
+                        return f"{v / 1_000_000:.2f}M"
+                    elif v >= 1_000:
+                        return f"{v / 1_000:.2f}K"
+                    return str(value)
+                except (TypeError, ValueError):
+                    return str(value)
+
+            def status_with_emoji(status):
+                s = status.upper()
+                if s == "CRITICAL":
+                    return "🔴 CRITICAL"
+                if s == "WARNING":
+                    return "🟡 WARNING"
+                if s == "NORMAL":
+                    return "🟢 NORMAL"
+                return s
+
+            def build_table_rows(metric_list):
+                rows = [{
                     "type": "tableRow",
                     "content": [
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": metric_display}]}]},
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": str(m["current_value"])}]}]},
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": str(m["yesterday_value"])}]}]},
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"{m['change_percentage']:.2f}%"}]}]},
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": trend}]}]},
-                        {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": status}]}]}
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Metric"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Current"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Yesterday"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Change"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Baseline Avg"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Baseline Change (%)"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Trend"}]}]},
+                        {"type": "tableHeader", "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Status"}]}]}
                     ]
+                }]
+                for m in metric_list:
+                    trend = "UP" if m["change_percentage"] > 0 else "DOWN"
+                    status = m.get("status", "UNKNOWN").upper()
+                    labels = m.get("labels", {})
+                    instance = labels.get("instance") or labels.get("node") or ""
+                    metric_display = f"{m['metric_name']} ({instance})" if instance else m["metric_name"]
+                    baseline_avg = m.get("baseline_avg")
+                    baseline_change = m.get("baseline_change")
+                    baseline_avg_display    = format_number(round(baseline_avg, 2)) if baseline_avg is not None else "N/A"
+                    baseline_change_display = f"{abs(round(baseline_change, 2))}%" if baseline_change is not None else "N/A"
+                    rows.append({
+                        "type": "tableRow",
+                        "content": [
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": metric_display}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": format_number(m["current_value"])}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": format_number(m["yesterday_value"])}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"{m['change_percentage']:.2f}%"}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": baseline_avg_display}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": baseline_change_display}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": trend}]}]},
+                            {"type": "tableCell", "content": [{"type": "paragraph", "content": [{"type": "text", "text": status_with_emoji(status)}]}]}
+                        ]
+                    })
+                return rows
+
+            # ── Build ADF content ───────────────────────────────────────────
+            adf_content = [
+                {
+                    "type": "heading",
+                    "attrs": {"level": 1},
+                    "content": [{"type": "text", "text": f"AUTOMATIC ALERT — {category} ({source})"}]
+                },
+                {
+                    "type": "heading",
+                    "attrs": {"level": 2},
+                    "content": [{"type": "text", "text": "Summary"}]
+                },
+                {
+                    "type": "bulletList",
+                    "content": [
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"Total Metrics: {total}"}]}]},
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"🔴 Critical: {critical_count}"}]}]},
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"🟡 Warning: {warning_count}"}]}]},
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"🟢 Stable: {normal_count}"}]}]},
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"Source: {source}"}]}]},
+                        {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"Category: {category}"}]}]}
+                    ]
+                },
+                {
+                    "type": "heading",
+                    "attrs": {"level": 2},
+                    "content": [{"type": "text", "text": "Insight"}]
+                },
+                {
+                    "type": "paragraph",
+                    "content": [{"type": "text", "text": (
+                        "All monitored metrics are within normal range. No abnormal behavior detected."
+                        if critical_count == 0 and warning_count == 0
+                        else "Some metrics show warning-level deviations, indicating minor irregularities that should be monitored."
+                        if critical_count == 0 and warning_count > 0
+                        else "Critical deviations detected in some metrics, indicating abnormal system behavior requiring attention."
+                        if critical_count > 0 and warning_count == 0 and normal_count == 0
+                        else "The system shows mixed behavior, with some metrics stable while others indicate warning or critical deviations."
+                    )}]
+                }
+            ]
+
+            if cpu_metrics:
+                adf_content.append({
+                    "type": "heading",
+                    "attrs": {"level": 2},
+                    "content": [{"type": "text", "text": "CPU Metrics"}]
                 })
+                adf_content.append({"type": "table", "content": build_table_rows(cpu_metrics)})
+
+            if other_metrics:
+                adf_content.append({
+                    "type": "heading",
+                    "attrs": {"level": 2},
+                    "content": [{"type": "text", "text": "Other Metrics"}]
+                })
+                adf_content.append({"type": "table", "content": build_table_rows(other_metrics)})
+
+            if not cpu_metrics and not other_metrics:
+                adf_content.append({"type": "table", "content": build_table_rows(metrics)})
+
+            # ── Root Cause & Recommended Action ─────────────────────────────
+            if metrics:
+                adf_content.append({
+                    "type": "heading",
+                    "attrs": {"level": 2},
+                    "content": [{"type": "text", "text": "Root Cause & Recommended Action"}]
+                })
+
+                for m in metrics:
+                    m_name      = m.get("metric_name", "Unknown")
+                    curr_val    = m.get("current_value", "N/A")
+                    base_avg    = m.get("baseline_avg")
+                    base_change = m.get("baseline_change")
+                    labels      = m.get("labels", {})
+
+                    instance = labels.get("instance", "")
+                    job      = labels.get("job", "")
+                    device   = labels.get("device", "")
+
+                    location_parts = []
+                    if instance:
+                        location_parts.append(f"Instance: {instance}")
+                    if job:
+                        location_parts.append(f"Job: {job}")
+                    if device:
+                        location_parts.append(f"Device: {device}")
+                    location_text = " | ".join(location_parts) if location_parts else "N/A"
+
+                    base_avg_text    = format_number(round(base_avg, 2)) if base_avg is not None else "N/A"
+                    base_change_text = f"{round(base_change, 2)}%" if base_change is not None else "N/A"
+
+                    # Determine direction from actual values
+                    try:
+                        is_rising = float(curr_val) > float(m.get("yesterday_value", 0))
+                    except (TypeError, ValueError):
+                        is_rising = True
+                    direction_word = "increased" if is_rising else "decreased"
+                    direction_noun = "increase"  if is_rising else "decrease"
+
+                    change_pct   = m.get("change_percentage", 0)
+                    status_lower = m.get("status", "").lower()
+                    deviation    = abs(base_change) if base_change is not None else None
+
+                    yesterday_display = format_number(m.get("yesterday_value", "N/A"))
+                    current_display   = format_number(curr_val)
+
+                    # ── Root cause: data-driven narrative ───────────────────
+                    if base_avg is None:
+                        root_cause_narrative = (
+                            f"Value {direction_word} {change_pct:.2f}% vs yesterday "
+                            f"({yesterday_display} → {current_display}). "
+                            f"No baseline history available yet to compare against normal behavior."
+                        )
+                    elif isinstance(base_avg, (int, float)) and abs(base_avg) < 0.001:
+                        root_cause_narrative = (
+                            f"Value {direction_word} {change_pct:.2f}% vs yesterday "
+                            f"({yesterday_display} → {current_display}). "
+                            f"Baseline average is near zero — deviation percentage is unreliable."
+                        )
+                    else:
+                        above_below = "above" if base_change > 0 else "below"
+                        root_cause_narrative = (
+                            f"Value {direction_word} {change_pct:.2f}% vs yesterday "
+                            f"({yesterday_display} → {current_display}). "
+                            f"This is {abs(round(base_change, 2))}% {above_below} "
+                            f"the historical average of {base_avg_text}."
+                        )
+
+                    root_cause_text = (
+                        f"{root_cause_narrative}\n"
+                        f"Location: {location_text}"
+                    )
+
+                    # ── Action: based on alert numbers only ─────────────────
+                    if base_avg is None:
+                        if change_pct > 50:
+                            action_text = (
+                                f"Large {direction_noun} ({change_pct:.2f}%) vs yesterday with no baseline established yet. "
+                                f"Monitor closely for 2-3 more cycles before drawing conclusions."
+                            )
+                        else:
+                            action_text = (
+                                f"No baseline history yet — normal behavior will be established after a few more alert cycles. "
+                                f"No immediate action required."
+                            )
+                    elif isinstance(base_avg, (int, float)) and abs(base_avg) < 0.001:
+                        action_text = (
+                            "Baseline average is near zero — deviation percentage is not reliable. "
+                            "Verify the metric is reporting valid data before taking any action."
+                        )
+                    else:
+                        target = f"on {instance}" if instance else "on this system"
+                        above_below = "above" if base_change > 0 else "below"
+                        if deviation is not None and deviation > 100:
+                            action_text = (
+                                f"Extreme anomaly: value is {deviation:.2f}% {above_below} historical average. "
+                                f"This is highly abnormal behavior. "
+                                f"Immediate investigation required {target} — "
+                                f"check for incidents, runaway processes, or misconfigurations."
+                            )
+                        elif deviation is not None and deviation > 50:
+                            action_text = (
+                                f"Severe deviation ({deviation:.2f}% {above_below} baseline). "
+                                f"Investigate what changed in the last 24 hours {target}. "
+                                f"Compare with related metrics from the same instance to identify the root cause."
+                            )
+                        elif deviation is not None and deviation > 25:
+                            action_text = (
+                                f"Significant {direction_noun} of {change_pct:.2f}% vs yesterday, "
+                                f"{deviation:.2f}% {above_below} baseline. "
+                                f"Review recent deployments or configuration changes {target}."
+                            )
+                        else:
+                            if status_lower == "critical":
+                                action_text = (
+                                    f"Value crossed the critical threshold with a {change_pct:.2f}% {direction_noun}. "
+                                    f"Monitor the next cycle — if the trend continues, escalate investigation {target}."
+                                )
+                            else:
+                                action_text = (
+                                    f"Minor {direction_noun} of {change_pct:.2f}% vs yesterday "
+                                    f"({deviation:.2f}% {above_below} baseline). "
+                                    f"Monitor the next alert cycle to confirm whether this is a growing trend."
+                                )
+
+                    adf_content.append({
+                        "type": "heading",
+                        "attrs": {"level": 3},
+                        "content": [{"type": "text", "text": m_name}]
+                    })
+                    adf_content.append({
+                        "type": "bulletList",
+                        "content": [
+                            {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": root_cause_text}]}]},
+                            {"type": "listItem", "content": [{"type": "paragraph", "content": [{"type": "text", "text": f"Recommended Action: {action_text}"}]}]}
+                        ]
+                    })
 
             description = {
                 "version": 1,
                 "type": "doc",
-                "content": [
-                    {
-                        "type": "heading",
-                        "attrs": {"level": 1},
-                        "content": [{"type": "text", "text": "AUTOMATIC CRITICAL ALERT - OpSight Operations Monitor"}]
-                    },
-                    {
-                        "type": "paragraph",
-                        "content": [{"type": "text", "text": f"Category: {category} | Source: {source}"}]
-                    },
-                    {
-                        "type": "table",
-                        "content": table_rows
-                    }
-                ]
+                "content": adf_content
             }
 
             ticket_data = {
@@ -567,7 +801,38 @@ def create_alert():
             "critical_threshold": data.get('critical_threshold', 25),
             "timestamp": datetime.now().isoformat()
         }
-        
+
+        metric_key = alert_data['metric_name']
+
+        with store_lock:
+            if metric_key not in baseline_store:
+                baseline_store[metric_key] = []
+
+            baseline_store[metric_key].append({
+                "value": alert_data["current_value"],
+                "timestamp": alert_data["timestamp"]
+            })
+
+            if len(baseline_store[metric_key]) > 50:
+                baseline_store[metric_key] = baseline_store[metric_key][-50:]
+
+        history = baseline_store.get(metric_key, [])
+
+        if len(history) >= 5:
+            values = [item["value"] for item in history]
+            baseline_avg = sum(values) / len(values)
+        else:
+            baseline_avg = None
+
+        alert_data["baseline_avg"] = baseline_avg
+
+        if baseline_avg is not None and baseline_avg != 0:
+            baseline_change = ((alert_data["current_value"] - baseline_avg) / baseline_avg) * 100
+        else:
+            baseline_change = None
+
+        alert_data["baseline_change"] = baseline_change
+
         group_key = f"{alert_data['source']}_{alert_data.get('category', 'general')}"
         current_time = datetime.now()
         
