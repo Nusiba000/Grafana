@@ -9,12 +9,126 @@ import threading
 import time
 import hashlib
 import json
+import math
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
 
 def generate_metric_key(metric_name, labels):
     labels_str = json.dumps(labels, sort_keys=True)
     return f"{metric_name}_{hashlib.md5(labels_str.encode()).hexdigest()}"
+
+
+def build_promql(metric_name, labels):
+    """Build a PromQL instant query string with label selectors."""
+    selector_parts = [
+        f'{k}="{v}"'
+        for k, v in labels.items()
+        if k != "__name__"
+    ]
+    if selector_parts:
+        return f'{metric_name}{{{",".join(selector_parts)}}}'
+    return metric_name
+
+
+def fetch_prometheus_baseline(source, metric_name, labels, now=None):
+    """
+    Query Prometheus at 7, 14, and 21 days ago for the same metric + labels.
+    Returns (baseline_avg, std_dev) — both None if no valid samples found.
+    """
+    base_url = DATA_SOURCES.get(source)
+    if not base_url:
+        return None, None
+
+    if now is None:
+        now = datetime.now()
+
+    query = build_promql(metric_name, labels)
+    samples = []
+
+    for days_ago in (7, 14, 21):
+        t = (now - timedelta(days=days_ago)).timestamp()
+        try:
+            response = requests.get(
+                f"{base_url}/api/v1/query",
+                params={"query": query, "time": t},
+                timeout=5
+            )
+            if response.status_code != 200:
+                continue
+            results = response.json().get("data", {}).get("result", [])
+            if not results:
+                continue
+            raw = results[0].get("value", [None, None])[1]
+            if raw is None:
+                continue
+            samples.append(float(raw))
+        except Exception:
+            continue
+
+    if not samples:
+        return None, None
+
+    baseline_avg = sum(samples) / len(samples)
+
+    if len(samples) > 1:
+        variance = sum((s - baseline_avg) ** 2 for s in samples) / len(samples)
+        std_dev = math.sqrt(variance)
+    else:
+        std_dev = None
+
+    return baseline_avg, std_dev
+
+
+def calculate_status(current, baseline_avg, std_dev):
+    """
+    Determine alert status using z-score (when std_dev is available)
+    or percentage change as fallback.
+    Returns (status, change_pct, z_score).
+    """
+    if baseline_avg is None or abs(baseline_avg) == 0:
+        return "unknown", None, None
+
+    change_pct = ((current - baseline_avg) / abs(baseline_avg)) * 100
+
+    if std_dev is not None and std_dev > 0:
+        z_score = (current - baseline_avg) / std_dev
+        if abs(z_score) >= 3:
+            status = "critical"
+        elif abs(z_score) >= 2:
+            status = "warning"
+        else:
+            status = "normal"
+    else:
+        z_score = None
+        if abs(change_pct) >= 50:
+            status = "critical"
+        elif abs(change_pct) >= 25:
+            status = "warning"
+        else:
+            status = "normal"
+
+    return status, change_pct, z_score
+
+
+def explain_baseline(metric_name, baseline_avg, change_pct, std_dev, z_score, n_weeks):
+    """
+    Build a human-readable baseline explanation for Jira tickets.
+    """
+    if baseline_avg is None or change_pct is None:
+        return f"{metric_name}: No historical baseline available for this time window."
+
+    direction = "above" if change_pct >= 0 else "below"
+    parts = [f"baseline avg: {round(baseline_avg, 6)}"]
+    if std_dev is not None:
+        parts.append(f"std dev: {round(std_dev, 6)}")
+    if z_score is not None:
+        parts.append(f"z-score: {round(z_score, 2)}")
+    parts.append(f"based on {n_weeks} week(s) of history")
+
+    return (
+        f"{metric_name} is {abs(round(change_pct, 2))}% {direction} normal for this time of day "
+        f"({', '.join(parts)})"
+    )
 
 
 store_lock = threading.Lock()
@@ -43,7 +157,6 @@ CORS(app)  # Enable CORS for React frontend
 critical_metrics_store = {}
 last_hourly_check = datetime.now()
 last_ticket_per_group = {}
-baseline_store = {}
 
 # JIRA Configuration
 JIRA_URL = os.getenv('JIRA_URL', 'https://omandatapark-sandbox-811.atlassian.net')
@@ -802,36 +915,40 @@ def create_alert():
             "timestamp": datetime.now().isoformat()
         }
 
-        metric_key = alert_data['metric_name']
+        # Query Prometheus for multi-week baseline (7, 14, 21 days ago)
+        now = datetime.now()
+        baseline_avg, std_dev = fetch_prometheus_baseline(
+            source=alert_data["source"],
+            metric_name=alert_data["metric_name"],
+            labels=alert_data.get("labels", {}),
+            now=now
+        )
 
-        with store_lock:
-            if metric_key not in baseline_store:
-                baseline_store[metric_key] = []
+        current_value = alert_data["current_value"]
+        status, change_pct, z_score = calculate_status(current_value, baseline_avg, std_dev)
 
-            baseline_store[metric_key].append({
-                "value": alert_data["current_value"],
-                "timestamp": alert_data["timestamp"]
-            })
-
-            if len(baseline_store[metric_key]) > 50:
-                baseline_store[metric_key] = baseline_store[metric_key][-50:]
-
-        history = baseline_store.get(metric_key, [])
-
-        if len(history) >= 5:
-            values = [item["value"] for item in history]
-            baseline_avg = sum(values) / len(values)
+        if baseline_avg is None:
+            n_weeks = 0
+        elif std_dev is None:
+            n_weeks = 1
         else:
-            baseline_avg = None
+            n_weeks = 3
 
-        alert_data["baseline_avg"] = baseline_avg
+        explanation = explain_baseline(
+            metric_name=alert_data["metric_name"],
+            baseline_avg=baseline_avg,
+            change_pct=change_pct,
+            std_dev=std_dev,
+            z_score=z_score,
+            n_weeks=n_weeks
+        )
 
-        if baseline_avg is not None and baseline_avg != 0:
-            baseline_change = ((alert_data["current_value"] - baseline_avg) / baseline_avg) * 100
-        else:
-            baseline_change = None
-
-        alert_data["baseline_change"] = baseline_change
+        alert_data["baseline_avg"]    = baseline_avg
+        alert_data["baseline_change"] = change_pct
+        alert_data["std_dev"]         = std_dev
+        alert_data["z_score"]         = z_score
+        alert_data["explanation"]     = explanation
+        alert_data["status"]          = status
 
         group_key = f"{alert_data['source']}_{alert_data.get('category', 'general')}"
         current_time = datetime.now()
